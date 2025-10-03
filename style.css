@@ -269,13 +269,11 @@
 /* Patito flotante */
 .patito-flota {
   position: absolute;
-  top: 70px; /* ajustable según vista previa */
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 350px;
   height: auto;
-  max-width: 350px;
-  max-height: 350px;
   animation: flotar 3s ease-in-out infinite alternate;
   z-index: 3;
 }
