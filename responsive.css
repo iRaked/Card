@@ -20,7 +20,7 @@
 @media (max-width: 500px) {
   .imagen-estatica {
     width: 200px;
-    aspect-ratio: 1 / 1;
+    height: auto;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
