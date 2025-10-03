@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <link rel="icon" type="image/x-icon" href="assets/img/SG.ico" />
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--  BLOCK -->
+        <script type="text/javascript">
+        document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        });
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+        <script src="script.js"></script>
+		<title>Baby Shower Patito</title>
+    </head>
+<body>
+    <audio id="musica-fondo" loop>
+      <source src="assets/audio/HappySong.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+    
+    <!-- Mensaje exclusivo para escritorio -->
+<div class="solo-escritorio">
+  <p>Este proyecto está diseñado exclusivamente para dispositivos móviles 📱</p>
+</div>
+
+<!-- Entrada móvil -->
+<div class="entrada-movil">
+  <img src="assets/img/Cover.png" alt="Portada completa" class="imagen-portada">
+
+  <div class="contenedor-boton">
+    <img src="assets/img/Open.png" alt="Botón de entrada" id="activarSmartCard" class="boton-imagen">
+    <p class="texto-entrada">Entra</p>
+  </div>
+</div>
+
+<!-- Smart Card oculta inicialmente -->
+<div class="wrapper">
+    <div class="fondo-burbujas">
+      <img src="assets/img/Bubbles.png" alt="Decoración burbujas">
+    </div>
+    <canvas id="burbujas"></canvas>
+
+<main class="smart-card">
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<header class="duck" id="intro">
+  <h1 class="baby">Baby Shower</h1>
+  <div class="block1">
+    <div class="contenedor-central">
+      <img src="assets/img/D1.png" alt="Patito flotante" class="patito-flota">
+      <img src="assets/img/Button.png" alt="Botón giratorio" class="boton-gira">
+    </div>
+  </div>
+  <h2 class="name">Marco Antonio</h2>
+</header>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<section class="seccion-patito" id="photo">
+  <h1 class="titulo-baby">Baby Shower</h1>
+  <div class="contenedor-visual">
+    <img src="assets/img/Ultrasonido.jpg" alt="Imagen simbólica" class="imagen-estatica">
+    <img src="assets/img/Button.png" alt="Botón giratorio" class="boton-gira-s2">
+  </div>
+</section>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<section class="seccion-textual" id="temporizador-section">
+  <h2 class="linea-texto">Un gran</h2>
+  <h2 class="linea-texto destacado">Campeón</h2>
+  <h2 class="linea-texto">está en camino</h2>
+  <p class="linea-texto invitacion">por favor únete<br>a su llegada</p>
+    
+  <div id="temporizador" class="temporizador"></div>
+</section>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<section class="seccion-evento" id="invitacion">
+  <img src="assets/img/Frame.png" alt="Decoración fondo" class="imagen-fondo-decorativa">
+  <div class="contenido-evento">
+    <div class="contenedor-imagenes">
+      <img src="assets/img/Bathtub.png" alt="Patito decorativo" class="imagen-patito">
+    </div>
+    <div class="bloque-textos">
+      <h2 class="evento-titulo">Baby Shower</h2>
+      <p class="evento-linea">a la espera de</p>
+      <h2 class="evento-nombre">Marco Antonio</h2>
+      <p class="evento-linea">Suite 204</p>
+      <p class="evento-linea">Real Inn Perinorte</p>
+      <p class="evento-linea">Vía Gustavo Baz</p>
+      <p class="evento-hora">17:00 Hrs.</p>
+      <p class="evento-linea">Viernes 16 Agosto</p>
+    </div>
+  </div>
+</section>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<section class="seccion-invitacion" id="location">
+  <div class="bloque-invitacion">
+    <p class="texto-invitacion">
+      Gracias por acompañarnos en este momento tan especial. Tu presencia es parte de la magia que estamos creando.
+    </p>
+    <a href="https://maps.google.com/?q=Real+Inn+Perinorte+Suite+204" target="_blank" class="boton-mapa">
+      📍 Ver ubicación
+    </a>
+  </div>
+
+  <div class="bloque-invitacion">
+    <p class="texto-invitacion">
+      Nos encantará contar contigo en este día tan especial. Confirma tu asistencia y sé parte de esta celebración.
+    </p>
+    <a href="https://wa.me/5215555555555?text=Confirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Marco%20Antonio" target="_blank" class="boton-confirmacion">
+      ✅ Confirmar asistencia
+    </a>
+  </div>
+</section>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+<section class="seccion-final">
+  <div class="contenedor-imagenes-final">
+    <img src="assets/img/Button.png" alt="Imagen circular giratoria" class="imagen-circular">
+    <img src="assets/img/D1.png" alt="Patito flotante" class="patito-flotante">
+  </div>
+  <h2 class="titulo-salida">Te Esperamos</h2>
+</section>
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ BTN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+  <nav class="botonera">
+  <button onclick="scrollToSection('intro')" class="boton-circular">
+    <img src="assets/icons/Agenda.png" alt="Card">
+  </button>
+  <button onclick="scrollToSection('photo')" class="boton-circular">
+    <img src="assets/icons/CamHD.png" alt="Photo">
+  </button>
+      <button onclick="scrollToSection('temporizador-section')" class="boton-circular">
+        <img src="assets/icons/Clock.png" alt="Temporizador">
+      </button>
+  <button onclick="scrollToSection('invitacion')" class="boton-circular">
+    <img src="assets/icons/Read.png" alt="Invitacion">
+  </button>
+  <button onclick="scrollToSection('location')" class="boton-circular">
+    <img src="assets/icons/GPS.png" alt="Location">
+  </button>
+</nav>
+
+</main>
+
+    </div>
+</body>
+</html>
