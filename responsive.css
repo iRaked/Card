@@ -1,7 +1,8 @@
+/* S1 */
 @media (max-width: 480px) {
   .patito-flota {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -15,5 +16,27 @@
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+/* S2 */
+@media (max-width: 480px) {
+  .imagen-estatica {
+    width: 100%;
+    max-width: 300px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .imagen-estatica {
+    width: 100%;
+    max-width: 250px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
   }
 }
