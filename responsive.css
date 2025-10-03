@@ -8,6 +8,14 @@
   }
 }
 
+@media (max-width: 400px) {
+  .patito-flota {
+    width: 280px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 /* S2 */
 @media (max-width: 500px) {
   .imagen-estatica {
@@ -18,3 +26,11 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 400px) {
+  .imagen-estatica {
+    width: 280px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
