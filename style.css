@@ -232,7 +232,7 @@
 /* 🧸 Títulos */
 .baby {
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 0.5rem;
   color: #ffda5d;
@@ -293,14 +293,13 @@
 
 .name {
   position: relative;
-  top: auto;
+  bottom: 80px;
   left: auto;
-    width: fit-content;
     margin: 2rem 0 auto;
     transform: none;
   white-space: nowrap;       /* ← evita el salto de línea */
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
   color: #ffda5d;
