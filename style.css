@@ -353,13 +353,17 @@
 /* ==========================Botón giratorio en sección 2========================== */
 .boton-gira-s2 {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
   max-width: 400px;
   max-height: 400px;
+  box-sizing: border-box;
   animation: vinilSpin 6s linear infinite;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
 }
 
