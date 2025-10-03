@@ -1,23 +1,18 @@
 /* S1 */
-
-
-
-/* S2 */
-@media (max-width: 480px) {
-  .imagen-estatica {
-    width: 400px;
-    aspect-ratio: 1 / 1;
+@media (max-width: 500px) {
+  .patito-flota {
+    width: 320px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
-@media (max-width: 420px) {
+/* S2 */
+@media (max-width: 500px) {
   .imagen-estatica {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+    width: 300px;
+    aspect-ratio: 1 / 1;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
