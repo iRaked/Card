@@ -1,5 +1,5 @@
 /* S1 */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .patito-flota {
     width: 100%;
     max-width: 350px;
@@ -19,14 +19,14 @@
   }
 }
 /* S2 */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .imagen-estatica {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    height: auto;
   }
 }
 
@@ -34,9 +34,9 @@
   .imagen-estatica {
     width: 100%;
     max-width: 250px;
+    height: auto;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    height: auto;
   }
 }
