@@ -8,3 +8,12 @@
   }
 }
 
+@media (max-width: 420px) {
+  .patito-flota {
+    width: 100%;
+    max-width: 250px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
