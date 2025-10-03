@@ -1,7 +1,8 @@
 /* S1 */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .patito-flota {
-    width: 380px;
+    width: 100%;
+    max-width: 350px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -17,6 +18,7 @@
     transform: translateX(-50%);
   }
 }
+
 /* S2 */
 @media (max-width: 500px) {
   .imagen-estatica {
