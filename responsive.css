@@ -29,7 +29,7 @@
 
 @media (max-width: 400px) {
   .imagen-estatica {
-    width: 280px;
+    width: 250px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
