@@ -340,6 +340,8 @@
   margin-bottom: 0.5rem;
   color: #ffda5d;
   scroll-margin-top: 10rem;
+  white-space: nowrap;
+  overflow-wrap: normal;
   text-shadow:
     -0.5px -0.5px 0 #fff, /* trazo */
      0.5px -0.5px 0 #fff,
@@ -497,7 +499,7 @@
 
 .evento-nombre {
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem; /* igual que destacado */
+  font-size: 4rem; /* igual que destacado */
   font-weight: bold;
   margin: 0.5rem 0;
   color: #0080ff;
@@ -514,7 +516,7 @@
 
 .evento-hora {
   font-family:  'Amber Shaie';
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 1rem;
   color: #0000ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
