@@ -269,11 +269,11 @@
 /* Patito flotante */
 .patito-flota {
   position: absolute;
-  top: 70px;
+  top: 70px; /* ajustable según vista previa */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 350px;
   max-height: 350px;
   animation: flotar 3s ease-in-out infinite alternate;
@@ -295,7 +295,8 @@
   position: relative;
   top: auto;
   left: auto;
-    margin: 2rem;
+    width: fit-content;
+    margin: 2rem 0 auto;
     transform: none;
   white-space: nowrap;       /* ← evita el salto de línea */
   font-family: 'Great Vibes', cursive;
