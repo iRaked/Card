@@ -223,7 +223,6 @@
   padding: 2rem 1rem;
   max-width: 500px;
   margin: 0rem auto 6rem auto;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,15 +252,17 @@
 /* ==========================Botón giratorio principal========================== */
   .boton-gira {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
   max-width: 400px;
   max-height: 400px;
+      box-sizing: border-box;
   animation: vinilSpin 6s linear infinite;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
 }
 
@@ -291,10 +292,11 @@
 }
 
 .name {
-  position: absolute;
-  top: 600px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: auto;
+  left: auto;
+    margin: 2rem;
+    transform: none;
   white-space: nowrap;       /* ← evita el salto de línea */
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
