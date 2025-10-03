@@ -224,6 +224,10 @@
   max-width: 500px;
   margin: 0rem auto 6rem auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* 🧸 Títulos */
@@ -256,6 +260,8 @@
   animation: vinilSpin 6s linear infinite;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
   z-index: 2;
 }
 
