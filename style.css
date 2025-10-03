@@ -374,9 +374,8 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100%;
   max-width: 350px;
-  max-height: 350px;
+  aspect-ratio: 1 / 1; /* ← asegura forma perfectamente circular */
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   z-index: 3;
