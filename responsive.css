@@ -2,7 +2,7 @@
 @media (max-width: 500px) {
   .patito-flota {
     width: 100%;
-    max-width: 350px;
+    max-width: 380px; /* ← aumento ceremonial */
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -22,7 +22,7 @@
 @media (max-width: 500px) {
   .imagen-estatica {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px; /* ← encaje más generoso con botón giratorio */
     aspect-ratio: 1 / 1;
     top: 50px;
     left: 50%;
