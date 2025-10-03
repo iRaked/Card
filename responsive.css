@@ -1,8 +1,7 @@
 /* S1 */
 @media (max-width: 500px) {
   .patito-flota {
-    width: 100%;
-    max-width: 380px; /* ← aumento ceremonial */
+    width: 380px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -21,8 +20,7 @@
 /* S2 */
 @media (max-width: 500px) {
   .imagen-estatica {
-    width: 100%;
-    max-width: 360px; /* ← encaje más generoso con botón giratorio */
+    width: 360px;
     aspect-ratio: 1 / 1;
     top: 50px;
     left: 50%;
