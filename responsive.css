@@ -2,8 +2,9 @@
   .patito-flota {
     width: 100%;
     max-width: 300px;
-    top: 20px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
+
