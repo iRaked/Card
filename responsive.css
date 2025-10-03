@@ -18,25 +18,3 @@
     transform: translateX(-50%);
   }
 }
-
-/* S2 */
-@media (max-width: 500px) {
-  .imagen-estatica {
-    width: 360px;
-    aspect-ratio: 1 / 1;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 420px) {
-  .imagen-estatica {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
