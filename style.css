@@ -330,7 +330,7 @@
   margin: 0 auto 6rem auto;
   padding: 2rem 1rem;
   text-align: center;
-  height: 300px; /* ← asegura espacio para posicionamiento absoluto */
+  min-height: 300px; /* ← reserva espacio sin forzar deformación */
 }
 
 .titulo-baby {
