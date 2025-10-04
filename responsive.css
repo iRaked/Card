@@ -1,37 +1,32 @@
-/* 🌐 Base — Note (≈600px) */
-/* No media query: se mantiene como referencia visual */
+/* iFone */
+@media (max-width: 450px) {
 .patito-flota {
   width: 350px;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
+    outline: 2px solid red !important;
+}
 }
 
+@media (max-width: 450px) {
 .imagen-estatica {
-  width: 350px;
+  width: 250px;
   top: 57px;
   left: 50%;
   transform: translateX(-50%);
+    outline: 2px solid red !important;
+}
 }
 
-/* 📱 iFone — ≤500px */
-@media (max-width: 500px) {
-  .imagen-estatica {
-    width: 250px; /* ajuste exclusivo para iFone */
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  /* patito-flota se conserva igual que Note */
-}
-
-/* 📱 Fon — ≤400px */
+/* Fon */
 @media (max-width: 400px) {
   .patito-flota {
     width: 280px; /* reducción exclusiva para Fon */
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+      outline: 2px solid red !important;
   }
 
   .imagen-estatica {
@@ -39,5 +34,6 @@
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+      outline: 2px solid red !important;
   }
 }
