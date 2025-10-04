@@ -77,34 +77,3 @@
     padding: 8rem 1rem !important;
   }
 }
-
-@media (max-width: 400px) {
-  .imagen-fondo-decorativa {
-    width: 120% !important;
-    top: -80px !important;
-    left: -10px !important;
-  }
-
-  .imagen-patito {
-    top: 300px !important;
-    right: 10px !important;
-    max-width: 320px !important;
-  }
-
-  .bloque-textos {
-    top: -280px !important;
-  }
-
-  .evento-titulo,
-  .evento-nombre {
-    font-size: 3.2rem !important;
-  }
-
-  .evento-linea {
-    font-size: 1.8rem !important;
-  }
-
-  .evento-hora {
-    font-size: 2.2rem !important;
-  }
-}
