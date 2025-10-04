@@ -401,23 +401,17 @@
   padding: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border: 2px solid #0050ff;
-  z-index: 10;
   backdrop-filter: blur(4px);
+  z-index: 10;
   will-change: transform, opacity;
-  animation: entradaSuave 1.2s ease-out both;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
-@keyframes entradaSuave {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-5px) scale(1.02);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+
+.cubo-redondeado.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .linea-texto {
