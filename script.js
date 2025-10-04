@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const cubo = document.querySelector(".cubo-redondeado");
+  if (!cubo) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cubo.classList.add("visible");
+        observer.unobserve(cubo); // solo una vez
+      }
+    });
+  }, {
+    threshold: 0.3 // activa cuando el 30% del cubo es visible
+  });
+
+  observer.observe(cubo);
+});
+
 // ⛔ Bloqueo del menú contextual
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
