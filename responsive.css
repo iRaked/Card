@@ -1,31 +1,41 @@
-/* iFone — rango exclusivo */
-@media (max-width: 500px) {
-  body.ifone .imagen-estatica {
-    width: 250px;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  body.ifone .patito-flota {
-    width: 350px;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+/* 🌐 Base — Note (≈600px) */
+/* No media query: se mantiene como referencia visual */
+.patito-flota {
+  width: 350px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Fon — rango exclusivo */
+.imagen-estatica {
+  width: 350px;
+  top: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 📱 iFone — ≤500px */
+@media (max-width: 500px) {
+  .imagen-estatica {
+    width: 250px; /* ajuste exclusivo para iFone */
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* patito-flota se conserva igual que Note */
+}
+
+/* 📱 Fon — ≤400px */
 @media (max-width: 400px) {
-  body.fon .imagen-estatica {
-    width: 220px;
-    top: 57px;
+  .patito-flota {
+    width: 280px; /* reducción exclusiva para Fon */
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  body.fon .patito-flota {
-    width: 280px;
+  .imagen-estatica {
+    width: 250px; /* ya está bien, se conserva */
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
