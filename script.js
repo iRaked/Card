@@ -137,3 +137,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Pantallas iFone y Fon en Body y/o DOM
+const width = window.innerWidth;
+
+if (width <= 400) {
+  document.body.classList.add("ifone");
+} else if (width <= 500) {
+  document.body.classList.add("fon");
+}
