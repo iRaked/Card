@@ -21,8 +21,6 @@
 
 @media (max-width: 430px) {
   .cubo-redondeado {
-    background-color: red !important;
-    border: 5px dashed yellow !important;
     max-width: 100% !important;
     opacity: 1 !important;
     transform: none !important;
