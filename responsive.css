@@ -1,11 +1,11 @@
-/* iFone */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ iFone ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 430px) {
 .patito-flota {
   width: 320px;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-    outline: 2px solid red !important;
+    outline: 2px solid cyan !important;
 }
 }
 
@@ -15,7 +15,7 @@
   top: 57px;
   left: 50%;
   transform: translateX(-50%);
-    outline: 2px solid red !important;
+    outline: 2px solid cyan !important;
 }
 }
 
@@ -27,7 +27,14 @@
   }
 }
 
-/* Fon */
+@media (max-width: 430px) {
+  .seccion-evento {
+    margin: 16rem auto 6rem auto !important;
+    padding: 8rem 1rem !important;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
   .patito-flota {
     width: 280px; /* reducción exclusiva para Fon */
@@ -61,5 +68,12 @@
     margin-top: 1.5rem !important;
     font-size: 1.8rem !important;
     padding: 0.8rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .seccion-evento {
+    margin: 16rem auto 6rem auto !important;
+    padding: 8rem 1rem !important;
   }
 }
