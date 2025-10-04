@@ -1,7 +1,8 @@
-/* S1 */
+/* S1 — patito-flota */
 @media (max-width: 500px) {
-  .patito-flota {
-    width: 350px;
+  body.note .patito-flota,
+  body.alexia2 .patito-flota {
+    width: 320px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -9,7 +10,8 @@
 }
 
 @media (max-width: 400px) {
-  .patito-flota {
+  body.note .patito-flota,
+  body.alexia2 .patito-flota {
     width: 280px;
     top: 50px;
     left: 50%;
@@ -17,10 +19,11 @@
   }
 }
 
-/* S2 */
+/* S2 — imagen-estatica */
 @media (max-width: 500px) {
-  .imagen-estatica {
-    width: 350px;
+  body.note .imagen-estatica,
+  body.alexia2 .imagen-estatica {
+    width: 220px;
     top: 57px;
     left: 50%;
     transform: translateX(-50%);
@@ -29,7 +32,7 @@
 
 @media (max-width: 400px) {
   .imagen-estatica {
-    width: 250px;
+    width: 250px; /* ← se mantiene para iFone, ya que está perfecta */
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
