@@ -462,7 +462,7 @@
   text-align: center;
   padding: 8rem 1rem; /* Separación S3 */
   max-width: 500px;
-  margin: 14rem auto 6rem auto; /* más espacio inferior */
+  margin: 16rem auto 6rem auto; /* más espacio inferior */
   position: relative;
   z-index: 2;
   clear: both;
