@@ -387,6 +387,7 @@
 /* Textos */
 .seccion-textual {
   position: relative;
+  overflow: hidden;
   text-align: center;
   padding: 2rem 1rem;
   max-width: 500px;
@@ -401,7 +402,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border: 2px solid #0050ff;
   z-index: 10;
-  /*backdrop-filter: blur(4px);*/
+  backdrop-filter: blur(4px);
   will-change: transform, opacity;
   animation: entradaSuave 1.2s ease-out both;
 }
@@ -460,14 +461,6 @@
 
 .temporizador:hover {
   transform: scale(1.05);
-}
-
-.smart-card,
-.seccion-textual,
-.cubo-redondeado {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
