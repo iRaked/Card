@@ -1,38 +1,31 @@
-/* S1 — patito-flota */
+/* iFone — rango exclusivo */
 @media (max-width: 500px) {
-  body.note .patito-flota,
-  body.alexia2 .patito-flota {
-    width: 320px;
+  body.ifone .imagen-estatica {
+    width: 250px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  body.ifone .patito-flota {
+    width: 350px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
+/* Fon — rango exclusivo */
 @media (max-width: 400px) {
-  body.note .patito-flota,
-  body.alexia2 .patito-flota {
-    width: 280px;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* S2 — imagen-estatica */
-@media (max-width: 500px) {
-  body.note .imagen-estatica,
-  body.alexia2 .imagen-estatica {
+  body.fon .imagen-estatica {
     width: 220px;
     top: 57px;
     left: 50%;
     transform: translateX(-50%);
   }
-}
 
-@media (max-width: 400px) {
-  .imagen-estatica {
-    width: 250px; /* ← se mantiene para iFone, ya que está perfecta */
+  body.fon .patito-flota {
+    width: 280px;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
