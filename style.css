@@ -402,7 +402,6 @@
   border: 2px solid #0050ff;
   backdrop-filter: blur(4px);
   animation: entradaSuave 1.2s ease-out both;
-    border: 5px dashed yellow !important;
 }
 @keyframes entradaSuave {
   0% {
@@ -460,6 +459,15 @@
 .temporizador:hover {
   transform: scale(1.05);
 }
+
+.smart-card,
+.seccion-textual,
+.cubo-redondeado {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 .seccion-evento {
   text-align: center;
