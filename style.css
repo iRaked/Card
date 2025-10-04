@@ -402,6 +402,7 @@
   border: 2px solid #0050ff;
   backdrop-filter: blur(4px);
   animation: entradaSuave 1.2s ease-out both;
+    border: 5px dashed yellow !important;
 }
 @keyframes entradaSuave {
   0% {
