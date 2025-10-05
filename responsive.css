@@ -5,7 +5,7 @@
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-    outline: 2px solid cyan !important;
+    outline: 2px solid red !important;
 }
 }
 
@@ -31,7 +31,6 @@
   .seccion-evento {
     margin: 16rem auto 6rem auto !important; /* antes 16 */
     padding: 8rem 1rem !important;
-      outline: 2px solid red !important;
   }
 }
 
@@ -56,7 +55,35 @@
 @media (max-width: 430px) {
   .seccion-invitacion {
     margin-top: -18rem !important; /* base -15rem, subimos 1rem ≈ 16px */
-      outline: 2px solid cyan !important;
+  }
+}
+
+/* ================================================================================ */
+@media (max-width: 430px) {
+  .seccion-final {
+    margin: 6rem auto 6rem auto !important;
+    padding: 2rem 1rem !important;
+      outline: 2px solid yellow !important;
+  }
+
+  .titulo-salida {
+    font-size: 4rem !important; /* antes 5rem */
+    white-space: nowrap !important; /* evita salto de línea */
+    overflow-wrap: normal !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .patito-flotante {
+    width: 300px !important; /* antes 350px */
+    top: 60px !important;
+  }
+
+  .imagen-circular {
+    width: 300px !important; /* antes 400px */
+    height: 300px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-top: 2rem !important;
   }
 }
 
@@ -140,7 +167,6 @@
 @media (max-width: 400px) {
   .seccion-invitacion {
     margin-top: -17rem !important; /* antes -19rem, subimos 2rem ≈ 32px */
-    outline: 2px solid red !important;
   }
 
   .texto-invitacion {
