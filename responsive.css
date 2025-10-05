@@ -77,3 +77,27 @@
     padding: 8rem 1rem !important;
   }
 }
+
+@media (max-width: 400px) {
+  .imagen-patito {
+    width: 200px;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 400px) {
+  .evento-titulo,
+  .evento-nombre {
+    font-size: 3.2rem;
+  }
+
+  .evento-linea {
+    font-size: 1.6rem;
+  }
+
+  .evento-hora {
+    font-size: 2rem;
+  }
+}
