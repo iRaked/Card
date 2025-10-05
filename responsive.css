@@ -182,7 +182,7 @@
   }
 }
 /* ================================================================================ */
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .imagen-circular {
     width: 286px !important;           /* 324px - 16px */
     height: 286px !important;
@@ -197,5 +197,19 @@
   .patito-flotante {
     width: 280px !important;
     top: 95px !important;
+  }
+}
+/* Botonera */
+@media (max-width: 400px) {
+  .boton-circular {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 50% !important;
+  }
+
+  .botonera {
+    max-width: 400px !important;       /* ← igual al viewport */
+    padding: 0.75rem 0.5rem !important; /* ← más aire vertical y lateral */
+    gap: 0.5rem !important;             /* ← espacio entre botones */
   }
 }
