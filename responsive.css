@@ -70,19 +70,20 @@
     overflow-wrap: normal !important;
     margin-bottom: 2rem !important;
   }
-    
-.imagen-circular {
-  max-width: 300px !important;
-  max-height: 300px !important;
-}
+
+  .imagen-circular {
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 400px !important;
+    max-height: 400px !important;
+  }
 
   .patito-flotante {
     top: 100px !important;
     width: 320px !important;
-    outline: 2px solid yellow !important;
+    outline: 2px solid red !important;
   }
 }
-
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
