@@ -202,14 +202,14 @@
 /* Botonera */
 @media (max-width: 400px) {
   .boton-circular {
-    width: 72px !important;
-    height: 72px !important;
+    width: 70px !important;
+    height: 70px !important;
     border-radius: 50% !important;
   }
 
   .botonera {
     max-width: 400px !important;       /* ← igual al viewport */
     padding: 0.75rem 0.5rem !important; /* ← más aire vertical y lateral */
-    gap: 0.5rem !important;             /* ← espacio entre botones */
+    gap: 0.4rem !important;             /* ← espacio entre botones */
   }
 }
