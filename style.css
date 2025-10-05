@@ -507,7 +507,7 @@
 .bloque-textos {
   position: relative;
   bottom: 320px; /* desplazamiento calculado */
-  z-index: 2;
+  z-index: 300;
 }
 
 .evento-titulo {
@@ -533,6 +533,7 @@
   line-height: 1.4;
   color: #fff000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    z-index: 200;
 }
 
 .evento-hora {
