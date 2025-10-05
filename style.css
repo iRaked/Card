@@ -497,7 +497,7 @@
   position: relative;
   top: 350px;
   right: 30px;
-  z-index: 1;
+  z-index: 100;
   width: 120%;
   max-width: 400px;
   height: auto;
@@ -589,25 +589,25 @@
   position: relative;
   padding: 2rem 1rem;
   max-width: 500px;
-  margin: 38rem auto 6rem auto; /* antes 6rem auto */
+  margin: 6rem auto 6rem auto; /* flujo restaurado y separación mínima */
   text-align: center;
 }
 
 .contenedor-imagenes-final {
   position: relative;
   width: 100%;
-  max-width: 300px;
-  margin: 0 auto 2rem auto;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 2rem; /* espacio entre título y contenido visual */
+  min-height: 400px; /* reserva espacio para evitar colapso */
 }
+
 /* ==========================Botón giratorio en sección 6========================== */
 .imagen-circular {
-  position: absolute;
-  left: -50px;
-  bottom: 0%;
+  position: relative;
+  margin-top: 0; /* espacio debajo del patito */
   width: 400px;
   height: 400px;
-    max-height: 400px;
-    max-width: 400px;
   animation: girar 6s linear infinite;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -621,7 +621,7 @@
 
 .patito-flotante {
   position: absolute;
-  bottom: 10px;
+  top: 60px; /* antes bottom: 150px */
   left: 50%;
   transform: translateX(-50%);
   width: 350px;
@@ -635,14 +635,19 @@
 }
 
 .titulo-salida {
-  position: relative;
-  bottom: 600px;
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
   text-align: center;
-  margin-bottom: 0.5rem;
-  color: #0080ff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  margin-bottom: 2rem;
+  color: #ffda5d;
+  text-shadow:
+    -0.5px -0.5px 0 #fff, /* trazo */
+     0.5px -0.5px 0 #fff,
+    -0.5px  0.5px 0 #fff,
+     0.5px  0.5px 0 #fff,
+     0 6px 3px #009ab5, /* sombra vertical */
+     0 0 20px rgba(90, 150, 255, 0.9), /* glow suave */
+     0 0 26px rgba(90, 150, 255, 0.9); /* glow extendido */
 }
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 📱 RESPONSIVO DEPURADO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 @media (max-width: 600px) {
