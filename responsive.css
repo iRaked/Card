@@ -44,6 +44,13 @@
   }
 }
 
+/* ================================================================================ */
+@media (max-width: 430px) {
+  .seccion-invitacion {
+    margin-top: -19rem !important; /* antes -20rem, subimos 1rem ≈ 16px */
+  }
+}
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
   .patito-flota {
@@ -119,5 +126,24 @@
 
   .evento-hora {
     font-size: 1.8rem; /* antes 2rem */
+  }
+}
+
+/* ================================================================================ */
+@media (max-width: 400px) {
+  .seccion-invitacion {
+    margin-top: -19rem !important; /* subimos 1rem ≈ 16px */
+  }
+
+  .texto-invitacion {
+    font-size: 1.8rem !important; /* antes 2rem */
+    line-height: 1.4 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .boton-mapa,
+  .boton-confirmacion {
+    font-size: 1.4rem !important; /* antes 1.6rem */
+    padding: 0.8rem 1.5rem !important;
   }
 }
