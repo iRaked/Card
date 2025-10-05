@@ -73,10 +73,12 @@
     margin-bottom: 2rem !important;
   }
 
+  @media (max-width: 430px) {
   .patito-flotante {
+    top: 120px !important; /* antes 100px, bajamos 20px */
     width: 320px !important;
-    top: 60px !important;
   }
+}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
