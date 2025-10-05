@@ -606,13 +606,18 @@
 /* ==========================Botón giratorio en sección 6========================== */
 .imagen-circular {
   position: relative;
-  margin-top: 0; /* espacio debajo del patito */
   width: 100%;
+  height: auto;
   max-width: 400px;
-  height: 400px;
+  max-height: 400px;
+  box-sizing: border-box;
   animation: girar 6s linear infinite;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
   z-index: 2;
 }
 
@@ -623,7 +628,7 @@
 
 .patito-flotante {
   position: absolute;
-  top: 60px; /* antes bottom: 150px */
+  top: 100px; /* antes bottom: 150px */
   left: 50%;
   transform: translateX(-50%);
   width: 350px;
