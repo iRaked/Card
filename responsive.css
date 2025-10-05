@@ -37,10 +37,11 @@
 
 @media (max-width: 430px) {
   .bloque-textos {
-    top: 25px;
+    bottom: 260px;
     position: relative;
     margin-top: 0;
-    bottom: auto; /* anulamos cualquier influencia previa */
+    bottom: auto;
+      outline: 2px solid red !important;
   }
 }
 
