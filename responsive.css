@@ -72,10 +72,10 @@
   }
 
   .imagen-circular {
-    width: 322px !important;
-    height: 322px !important;
-    max-width: 322px !important;
-    max-height: 322px !important;
+    width: 324px !important;
+    height: 324px !important;
+    max-width: 324px !important;
+    max-height: 324px !important;
     animation: girar 6s linear infinite !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -83,7 +83,7 @@
   }
 
   .patito-flotante {
-    top: 100px !important;
+    top: 90px !important; /* Base 100 */
     width: 320px !important;
     outline: 2px solid red !important;
   }
