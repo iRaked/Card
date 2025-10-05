@@ -83,9 +83,8 @@
   }
 
   .patito-flotante {
-    top: 70px !important; /* Base 100 */
+    top: 80px !important; /* Base 100 */
     width: 320px !important;
-    outline: 2px solid red !important;
   }
 }
 
@@ -96,7 +95,6 @@
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-      outline: 2px solid red !important;
   }
 
   .imagen-estatica {
@@ -183,5 +181,21 @@
     padding: 0.8rem 1.5rem !important;
   }
 }
+/* ================================================================================ */
+@media (max-width: 390px) {
+  .imagen-circular {
+    width: 308px !important;           /* 324px - 16px */
+    height: 308px !important;
+    max-width: 308px !important;
+    max-height: 308px !important;
+    animation: girar 6s linear infinite !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
 
-
+  .patito-flotante {
+    width: 334px !important;           /* 350px - 16px */
+    top: 95px !important;
+  }
+}
