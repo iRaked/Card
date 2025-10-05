@@ -83,14 +83,14 @@
 /* ================================================================================ */
 @media (max-width: 400px) {
   .bloque-textos {
-    bottom: 270px; /* antes 240px, subimos 15px */
+    bottom: 280px; /* antes 270px, subimos 10px */
     margin-top: 0;
     position: relative;
-      outline: 2px solid red !important;
+      outline: 2px solid cyan !important;
   }
 
   .imagen-patito {
-    top: 250px; /* antes 240px, bajamos 15px */
+    top: 245px; /* antes 240px, bajamos 15px */
     left: 50%;
     transform: translateX(-50%);
     width: 290px;
