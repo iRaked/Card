@@ -83,10 +83,10 @@
 /* ================================================================================ */
 @media (max-width: 400px) {
   .bloque-textos {
-    bottom: 270px; /* antes 280px, bajamos 10px para compensar la tipografia */
+    bottom: 290px; /* antes 280px, bajamos 10px para compensar la tipografia */
     margin-top: 0;
     position: relative;
-      outline: 2px solid red !important;
+      outline: 2px solid yellow !important;
   }
 
   .imagen-patito {
