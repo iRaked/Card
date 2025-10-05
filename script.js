@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cubo = document.querySelector(".cubo-redondeado");
-  if (!cubo) return;
+  const cubos = document.querySelectorAll(".cubo-redondeado");
+  if (!cubos.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        cubo.classList.add("visible");
-        observer.unobserve(cubo); // solo una vez
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
       }
     });
   }, {
-    threshold: 0.3 // activa cuando el 30% del cubo es visible
+    threshold: 0.3
   });
 
-  observer.observe(cubo);
+  cubos.forEach(cubo => observer.observe(cubo));
 });
 
 // ⛔ Bloqueo del menú contextual
