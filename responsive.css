@@ -79,25 +79,38 @@
 }
 
 @media (max-width: 400px) {
+  /* Restaurar posición de textos */
+  .bloque-textos {
+    bottom: 0;
+    margin-top: -60px; /* menos desplazamiento vertical */
+  }
+
+  /* Imagen decorativa más arriba, sin tocar el borde */
+  .imagen-fondo-decorativa {
+    bottom: 240px;
+    left: 15px;
+    width: 90%;
+  }
+
+  /* Bañera más grande y centrada */
   .imagen-patito {
-    width: 200px;
-    top: 120px;
+    width: 260px;
+    top: 140px;
     left: 50%;
     transform: translateX(-50%);
   }
-}
 
-@media (max-width: 400px) {
+  /* Tipografía más compacta */
   .evento-titulo,
   .evento-nombre {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 
   .evento-linea {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .evento-hora {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
