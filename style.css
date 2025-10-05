@@ -1,3 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amber+Shaie&display=swap');
+
+#musica-fondo {
+  display: none;
+}
+
+/* Ocultar todo en escritorio */
+.solo-escritorio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  z-index: 9999;
+}
+
+/* 📱 Entrada móvil */
+.entrada-movil {
+  position: absolute !important; /* fixed opcional*/
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖼️ Portada que cubre todo */
+.imagen-portada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 🔘 Botón animado como imagen */
+.boton-imagen {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  animation: zoomInOut 2s infinite;
+  z-index: 1;
+}
+
+/* 🖥️ Ocultar entrada en escritorio */
+@media (min-width: 601px) {
+  .entrada-movil {
+    display: none;
+  }
+}
+
+.contenedor-boton {
+  position: relative;
+  width: 120px;
+  height: auto;
+  animation: zoomInOut 2s infinite;
+  cursor: pointer;
+}
+
+.boton-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-entrada {
+  position: absolute;
+  bottom: 0%; /* Ajusta según el diseño del botón */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #0033A0; /* Azul rey */
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Animación zoom in/out */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* 🫧 Canvas de burbujas como fondo decorativo */
+#burbujas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('assets/img/BG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  overflow-x: hidden;
+    display: flex;
+  flex-direction: column;
+}
+
+/* Fondo decorativo limitado al contenido real */
+.fondo-burbujas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.fondo-burbujas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.4;
+}
+
+/* 🎁 Contenedor principal */
+.smart-card {
+  position: relative;
+  background-image: url('assets/img/BG.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  background-attachment: fixed;
+  overflow: hidden; /* 🔒 evita que hijos se desborden visualmente */
+  display: none;
+  z-index: 10;
+}
+
+.smart-card.activa {
+  display: block;
+  position: relative;
+  z-index: 9998;
+}
+
+.boton-circular {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #0050ff; /* 🔵 azul intenso */
+  background-color: #ffffff50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.boton-circular:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+}
+
+.boton-circular img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* 🧭 Botonera fija en la parte baja */
+.botonera {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  z-index: 9999;
+}
+
+.botonera button:hover {
+  background: #fff000;
+}
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* Contenedor S1 */
+.duck {
+  position: relative;
+  padding: 2rem 1rem;
+  max-width: 500px;
+  margin: 0rem auto 6rem auto;
+  text-align: center;
+}
+
+/* Contenedor visual para patito y botón giratorio */
+.contenedor-central {
+  position: relative;
+  padding: 2rem 1rem;
+  max-width: 500px;
+  margin: 0rem auto 6rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 🧸 Títulos */
+.baby {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #ffda5d;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  scroll-margin-top: 10rem;
+  text-shadow:
+    -0.5px -0.5px 0 #fff, /* trazo */
+     0.5px -0.5px 0 #fff,
+    -0.5px  0.5px 0 #fff,
+     0.5px  0.5px 0 #fff,
+     0 6px 3px #009ab5, /* sombra vertical */
+     0 0 20px rgba(90, 150, 255, 0.9), /* glow suave */
+     0 0 26px rgba(90, 150, 255, 0.9); /* glow extendido */
+}
+
+/* ==========================Botón giratorio principal========================== */
+  .boton-gira {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+      box-sizing: border-box;
+  animation: vinilSpin 6s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+/* Patito flotante */
+.patito-flota {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: auto;
+  animation: flotar 3s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+/* 🫧 Animaciones */
+@keyframes vinilSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes flotar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.name {
+  position: relative;
+  bottom: 80px;
+  left: auto;
+    margin: 2rem 0 auto;
+    transform: none;
+  white-space: nowrap;       /* ← evita el salto de línea */
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffda5d;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  z-index: 2;
+  text-shadow:
+    -0.5px -0.5px 0 #fff,
+     0.5px -0.5px 0 #fff,
+    -0.5px  0.5px 0 #fff,
+     0.5px  0.5px 0 #fff,
+     0 6px 3px #009ab5,
+     0 0 20px rgba(90, 150, 255, 0.9),
+     0 0 26px rgba(90, 150, 255, 0.9);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* Imagen estática y botón giratorio */
+.seccion-patito {
+  position: relative;
+  padding: 2rem 1rem;
+  max-width: 500px;
+  margin: 0 auto 6rem auto;
+  text-align: center;
+}
+
+.contenedor-visual {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 6rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 300px; /* ← reserva espacio sin forzar deformación */
+}
+
+.titulo-baby {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #ffda5d;
+  scroll-margin-top: 10rem;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  text-shadow:
+    -0.5px -0.5px 0 #fff, /* trazo */
+     0.5px -0.5px 0 #fff,
+    -0.5px  0.5px 0 #fff,
+     0.5px  0.5px 0 #fff,
+     0 6px 3px #009ab5, /* sombra vertical */
+     0 0 20px rgba(90, 150, 255, 0.9), /* glow suave */
+     0 0 26px rgba(90, 150, 255, 0.9); /* glow extendido */
+}
+
+/* ==========================Botón giratorio en sección 2========================== */
+.boton-gira-s2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+  box-sizing: border-box;
+  animation: vinilSpin 6s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+/* Imagen estática redonda */
+.imagen-estatica {
+  position: absolute;
+  top: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1; /* ← asegura forma perfectamente circular */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* Textos */
+.seccion-textual {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 500px;
+  margin: 0rem auto 4rem auto; /* separa del bloque anterior */
+  clear: both;
+}
+
+.cubo-redondeado {
+  background-color: rgba(54, 136, 255, 0.5);
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0050ff;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.cubo-redondeado.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.linea-texto {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.0rem;
+  margin: 0.5rem 0;
+  color: #ffda5d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.linea-texto.destacado {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0080ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.linea-texto.invitacion {
+  font-size: 4.0rem;
+  color: #0000ff;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.temporizador {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background-color: #0080ff; /* azul intenso */
+  color: #ffda5d; /* casi amarillo */
+  font-size: 2.0rem;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0050ff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.temporizador:hover {
+  transform: scale(1.05);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+.seccion-evento {
+  text-align: center;
+  padding: 8rem 1rem; /* Separación S3 */
+  max-width: 500px;
+  margin: 16rem auto 6rem auto; /* más espacio inferior */
+  position: relative;
+  z-index: 2;
+  clear: both;
+}
+
+/* Imagen decorativa debajo de todo */
+.imagen-fondo-decorativa {
+  position: absolute;
+  bottom: 280px;
+  left: 25px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Contenido textual y visual */
+.contenido-evento {
+  position: relative;
+  z-index: 2;
+}
+
+.contenedor-imagenes {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 2rem auto;
+}
+
+.imagen-patito {
+  position: relative;
+  top: 350px;
+  right: 30px;
+  z-index: 100;
+  width: 120%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Textos */
+.bloque-textos {
+  position: relative;
+  bottom: 320px; /* desplazamiento calculado */
+  z-index: 300;
+}
+
+.evento-titulo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.0rem;
+  margin: 0.5rem 0;
+  color: #0080ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.evento-nombre {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem; /* igual que destacado */
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #0080ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.evento-linea {
+  font-size: 2rem; /* antes 4rem */
+  margin: 0.3rem 0;
+  line-height: 1.4;
+  color: #fff000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    z-index: 200;
+}
+
+.evento-hora {
+  font-family: 'Amber Shaie', cursive, sans-serif !important;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: #0000ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+.seccion-invitacion {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 500px;
+  margin: 0rem auto 4rem auto;
+    margin-top: -20rem; /* Separación S4 */
+  position: relative;
+  z-index: 2;
+}
+
+.bloque-invitacion {
+  margin-bottom: 4rem;
+}
+
+.texto-invitacion {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #fff000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.boton-mapa,
+.boton-confirmacion {
+  font-family: 'Great Vibes', cursive;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #0080ff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: background-color 0.3s ease;
+}
+
+.boton-mapa:hover,
+.boton-confirmacion:hover {
+  background-color: #0000ff;
+}
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 .seccion-final {
   position: relative;
@@ -70,4 +657,62 @@
      0 6px 3px #009ab5, /* sombra vertical */
      0 0 20px rgba(90, 150, 255, 0.9), /* glow suave */
      0 0 26px rgba(90, 150, 255, 0.9); /* glow extendido */
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 📱 RESPONSIVO DEPURADO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+@media (max-width: 600px) {
+    
+/* Desktop */
+.solo-escritorio {
+    display: none;
+  }
+
+  .entrada-movil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fefefe;
+  }
+
+  .imagen-entrada {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .boton-entrada {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    animation: zoomInOut 2s infinite;
+  }
+
+  .smart-card {
+    display: none;
+  }
+
+  .smart-card.activa {
+    display: block;
+  }
+}
+
+/* Animación zoom in/out */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Ocultar por defecto */
+.oculto {
+  display: none;
 }
