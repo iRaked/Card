@@ -72,13 +72,14 @@
   }
 
   .imagen-circular {
-    width: 90% !important; /* ← adaptativo, no fijo */
-    max-width: 320px !important; /* ← ceremonialmente más pequeño que en Note */
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    width: 322px !important;
+    height: 322px !important;
+    max-width: 322px !important;
+    max-height: 322px !important;
+    animation: girar 6s linear infinite !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
   }
 
   .patito-flotante {
