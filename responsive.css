@@ -15,6 +15,7 @@
   top: 57px;
   left: 50%;
   transform: translateX(-50%);
+    outline: 2px solid cyan !important;
 }
 }
 
@@ -48,6 +49,7 @@
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+      outline: 2px solid red !important;
   }
 }
 
@@ -79,21 +81,21 @@
 @media (max-width: 400px) {
   /* Restaurar posición de textos */
   .bloque-textos {
-    bottom: 0;
-    margin-top: -20px; /* menos desplazamiento vertical */
+    bottom: 40;
+    margin-top: 0;
   }
 
   /* Imagen decorativa más arriba, sin tocar el borde */
   .imagen-fondo-decorativa {
-    bottom: 260px;
+    bottom: 300px;
     left: 15px;
     width: 90%;
   }
 
   /* Bañera más grande y centrada */
   .imagen-patito {
-    width: 280px;
-    top: 100px;
+    width: 290px;
+    top: 220px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -112,5 +114,3 @@
     font-size: 2.2rem;
   }
 }
-
-
