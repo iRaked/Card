@@ -27,47 +27,11 @@
   }
 }
 
+/* ================================================================================ */
 @media (max-width: 430px) {
   .seccion-evento {
     margin: 16rem auto 6rem auto !important;
     padding: 8rem 1rem !important;
-  }
-}
-
-@media (max-width: 430px) {
-  /* Textos bajan media línea para habitar la sección con dignidad */
-  .bloque-textos {
-    bottom: 20px;
-    margin-top: 0;
-  }
-
-  /* Imagen decorativa sube para no tocar la botonera */
-  .imagen-fondo-decorativa {
-    bottom: 340px;
-    left: 25px;
-    width: 90%;
-  }
-
-  /* Bañera se conserva, ya está bien posicionada */
-  .imagen-patito {
-    width: 290px;
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Tipografía compacta como en Fon */
-  .evento-titulo,
-  .evento-nombre {
-    font-size: 3.4rem;
-  }
-
-  .evento-linea {
-    font-size: 1.8rem;
-  }
-
-  .evento-hora {
-    font-size: 2.2rem;
   }
 }
 
@@ -132,7 +96,7 @@
   /* Bañera baja un poco más */
   .imagen-patito {
     width: 290px;
-    top: 240px; /* antes 220px */
+    top: 180px; /* antes 220px */
     left: 50%;
     transform: translateX(-50%);
   }
