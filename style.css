@@ -598,12 +598,12 @@
 .contenedor-imagenes-final {
   position: relative;
   width: 100%;
-  max-width: 400px; /* ← más espacio para el patito */
+  max-width: 400px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding: 0; /* ← temporalmente eliminar padding para validar */
   min-height: 400px;
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -613,10 +613,9 @@
 .imagen-circular {
   position: relative;
   width: 100%;
-  max-width: 400px; /* ← restaurado como en S1 */
   height: auto;
+  max-width: 400px;
   max-height: 400px;
-  aspect-ratio: 1 / 1;
   box-sizing: border-box;
   animation: girar 6s linear infinite;
   border-radius: 50%;
@@ -628,6 +627,7 @@
   z-index: 2;
 }
 
+
 @keyframes girar {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -635,7 +635,7 @@
 
 .patito-flotante {
   position: absolute;
-  top: 90px; /* ← igual que S1 */
+  top: 70px; /* Base 70 */
   left: 50%;
   transform: translateX(-50%);
   width: 350px; /* ← igual que S1 */
