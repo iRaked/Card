@@ -472,7 +472,7 @@
 /* Imagen decorativa debajo de todo */
 .imagen-fondo-decorativa {
   position: absolute;
-  top: -50px;
+  bottom: 280px;
   left: 25px;
   width: 90%;
   height: auto;
@@ -506,7 +506,7 @@
 /* Textos */
 .bloque-textos {
   position: relative;
-  top: -320px; /* desplazamiento calculado */
+  bottom: 320px; /* desplazamiento calculado */
   z-index: 2;
 }
 
