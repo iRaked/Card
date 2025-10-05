@@ -31,6 +31,7 @@
   .seccion-evento {
     margin: 16rem auto 6rem auto !important; /* antes 16 */
     padding: 8rem 1rem !important;
+      outline: 2px solid red !important;
   }
 }
 
@@ -45,7 +46,7 @@
 /* ================================================================================ */
 @media (max-width: 430px) {
   .seccion-invitacion {
-    margin-top: -18rem !important; /* antes -15rem, subimos 1rem ≈ 16px */
+    margin-top: -18rem !important; /* base -15rem, subimos 1rem ≈ 16px */
       outline: 2px solid cyan !important;
   }
 }
