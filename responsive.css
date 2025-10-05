@@ -74,18 +74,9 @@
   }
 
   .patito-flotante {
-    width: 300px !important; /* antes 350px */
+    width: 320px !important;
     top: 60px !important;
   }
-
-  .imagen-circular {
-    width: 300px !important; /* antes 400px */
-    height: 300px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    margin-top: 2rem !important;
-  }
-}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
