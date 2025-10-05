@@ -597,10 +597,11 @@
 .contenedor-imagenes-final {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px; /* igual que S1/S2 */
+  box-sizing: border-box;
   margin: 0 auto;
-  padding-top: 2rem; /* espacio entre título y contenido visual */
-  min-height: 400px; /* reserva espacio para evitar colapso */
+  padding-top: 2rem;
+  min-height: 400px;
 }
 
 /* ==========================Botón giratorio en sección 6========================== */
