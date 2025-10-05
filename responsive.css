@@ -80,38 +80,28 @@
     padding: 0.8rem 1.5rem !important;
   }
 }
-
+/* ================================================================================ */
 @media (max-width: 400px) {
-  .seccion-evento {
-    margin: 16rem auto 6rem auto !important;
-    padding: 8rem 1rem !important;
-  }
-}
-
-@media (max-width: 400px) {
-  /* Textos bajan media línea */
   .bloque-textos {
-    bottom: 20px; /* antes 40 */
+    bottom: 240px; /* antes 20px */
     margin-top: 0;
+    position: relative;
+      outline: 2px solid red !important;
   }
 
-  /* Imagen decorativa sube ligeramente */
+  .imagen-patito {
+    top: 240px; /* antes 180px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 290px;
+  }
+
   .imagen-fondo-decorativa {
-    bottom: 340px; /* antes 300 */
+    bottom: 360px; /* antes 340px */
     left: 15px;
     width: 90%;
   }
 
-  /* Bañera baja un poco más */
-  .imagen-patito {
-    width: 290px;
-    top: 180px; /* antes 220px */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-  /* Tipografía más compacta */
   .evento-titulo,
   .evento-nombre {
     font-size: 3.4rem;
@@ -125,4 +115,3 @@
     font-size: 2.2rem;
   }
 }
-
