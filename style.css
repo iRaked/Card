@@ -506,9 +506,14 @@
 /* Textos */
 .bloque-textos {
   position: relative;
-  bottom: 320px; /* desplazamiento calculado */
+  bottom: 320px;
   z-index: 300;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  word-break: break-word;
 }
+
 
 .evento-titulo {
   font-family: 'Great Vibes', cursive;
@@ -548,7 +553,7 @@
   text-align: center;
   padding: 2rem 1rem;
   max-width: 500px;
-  margin: 0 auto 4rem auto;
+  margin: 4rem auto;
   position: relative;
   z-index: 2;
 }
