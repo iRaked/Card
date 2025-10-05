@@ -544,26 +544,52 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-.seccion-invitacion {
+.seccion-textual#location {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   max-width: 500px;
-  margin: 0rem auto 4rem auto;
-    margin-top: -20rem; /* Separación S4 */
+  margin: 0 auto 4rem auto;
   position: relative;
   z-index: 2;
 }
 
-.bloque-invitacion {
-  margin-bottom: 4rem;
+.cubo-redondeado {
+  background-color: rgba(54, 136, 255, 0.5);
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0050ff;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
-.texto-invitacion {
+.cubo-redondeado.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.linea-texto {
   font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  margin: 0.5rem 0;
+  color: #ffda5d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.linea-texto.destacado {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0080ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.linea-texto.invitacion {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
   color: #fff000;
+  margin: 1.5rem 0;
+  line-height: 1.6;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
@@ -579,12 +605,14 @@
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.6);
   transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
 .boton-mapa:hover,
 .boton-confirmacion:hover {
   background-color: #0000ff;
 }
+
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 .seccion-final {
   position: relative;
