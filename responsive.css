@@ -180,6 +180,19 @@
     font-size: 1.4rem !important;
     padding: 0.8rem 1.5rem !important;
   }
+    
+.linea-texto {
+    font-size: 2.6rem !important;
+  }
+
+  .linea-texto.destacado {
+    font-size: 3.2rem !important;
+  }
+
+  .linea-texto.invitacion {
+    font-size: 1.8rem !important;
+  }
+
 }
 /* ================================================================================ */
 @media (max-width: 400px) {
