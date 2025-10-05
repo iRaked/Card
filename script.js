@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.6, // activa cuando el 60% del cubo es visible
+    threshold: 0.45, // activa cuando el 60% del cubo es visible
     rootMargin: "0px 0px -20% 0px" // retrasa la activación hasta que el cubo esté más centrado
   });
 
