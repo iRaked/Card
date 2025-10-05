@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.3
+    threshold: 0.6, // activa cuando el 60% del cubo es visible
+    rootMargin: "0px 0px -20% 0px" // retrasa la activación hasta que el cubo esté más centrado
   });
 
   cubos.forEach(cubo => observer.observe(cubo));
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ctx = canvas.getContext('2d');
 
-  // 🔁 Ajuste dinámico del tamaño del canvas según su contenedor real
   const resizeCanvas = () => {
     const rect = canvas.getBoundingClientRect();
     canvas.width = rect.width;
@@ -39,15 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  // 🎈 Generación inicial de burbujas
   let burbujas = Array.from({ length: 30 }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * 8 + 2,       // radio entre 2 y 10px
-    d: Math.random() * 1 + 0.5      // velocidad entre 0.5 y 1.5
+    r: Math.random() * 8 + 2,
+    d: Math.random() * 1 + 0.5
   }));
 
-  // 🖌️ Animación continua de burbujas
   function dibujarBurbujas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
@@ -57,10 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
       ctx.fill();
 
-      // Movimiento ascendente
       b.y -= b.d;
 
-      // Si sale por arriba, reaparece abajo
       if (b.y < -10) {
         b.y = canvas.height + 10;
         b.x = Math.random() * canvas.width;
@@ -72,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dibujarBurbujas();
 
-  // ⏳ Inicializar temporizador cuando el DOM esté listo
   iniciarTemporizador(new Date("2030-08-17T17:00:00").getTime());
 });
 
@@ -109,7 +104,7 @@ function iniciarTemporizador(fechaEvento) {
     contenedor.innerHTML = `Faltan ${dias}d ${horas}h ${minutos}m ${segundos}s`;
   }
 
-  actualizar(); // muestra el primer valor sin esperar
+  actualizar();
   setInterval(actualizar, 1000);
 }
 
@@ -140,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!botonEntrada || !entrada || !smartCard) return;
 
   botonEntrada.addEventListener("click", () => {
-    console.log("✅ Botón 'Entrar' fue clickeado"); // ← Aquí validamos el clic
+    console.log("✅ Botón 'Entrar' fue clickeado");
 
     entrada.style.display = "none";
     entrada.style.setProperty("display", "none", "important");
