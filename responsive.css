@@ -83,7 +83,8 @@
 /* ================================================================================ */
 @media (max-width: 400px) {
   .seccion-evento {
-    scroll-margin-top: 15rem; /* 15rem ≈ 240px */
+    position: relative;
+    bottom: -40px; /* desplazamos visualmente sin tocar el margin ni el padding */
   }
 }
 
@@ -92,7 +93,7 @@
     bottom: 290px; /* antes 280px, bajamos 10px para compensar la tipografia */
     margin-top: 0;
     position: relative;
-      outline: 2px solid cyan !important;
+      outline: 2px solid red !important;
   }
 
   .imagen-patito {
