@@ -34,6 +34,43 @@
   }
 }
 
+@media (max-width: 430px) {
+  /* Textos bajan media línea para habitar la sección con dignidad */
+  .bloque-textos {
+    bottom: 20px;
+    margin-top: 0;
+  }
+
+  /* Imagen decorativa sube para no tocar la botonera */
+  .imagen-fondo-decorativa {
+    bottom: 340px;
+    left: 25px;
+    width: 90%;
+  }
+
+  /* Bañera se conserva, ya está bien posicionada */
+  .imagen-patito {
+    width: 290px;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Tipografía compacta como en Fon */
+  .evento-titulo,
+  .evento-nombre {
+    font-size: 3.4rem;
+  }
+
+  .evento-linea {
+    font-size: 1.8rem;
+  }
+
+  .evento-hora {
+    font-size: 2.2rem;
+  }
+}
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Fon ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media (max-width: 400px) {
   .patito-flota {
@@ -79,26 +116,27 @@
 }
 
 @media (max-width: 400px) {
-  /* Restaurar posición de textos */
+  /* Textos bajan media línea */
   .bloque-textos {
-    bottom: 40;
+    bottom: 20px; /* antes 40 */
     margin-top: 0;
   }
 
-  /* Imagen decorativa más arriba, sin tocar el borde */
+  /* Imagen decorativa sube ligeramente */
   .imagen-fondo-decorativa {
-    bottom: 300px;
+    bottom: 340px; /* antes 300 */
     left: 15px;
     width: 90%;
   }
 
-  /* Bañera más grande y centrada */
+  /* Bañera baja un poco más */
   .imagen-patito {
     width: 290px;
-    top: 220px;
+    top: 240px; /* antes 220px */
     left: 50%;
     transform: translateX(-50%);
   }
+}
 
   /* Tipografía más compacta */
   .evento-titulo,
