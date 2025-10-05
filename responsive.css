@@ -82,20 +82,20 @@
   /* Restaurar posición de textos */
   .bloque-textos {
     bottom: 0;
-    margin-top: -60px; /* menos desplazamiento vertical */
+    margin-top: -20px; /* menos desplazamiento vertical */
   }
 
   /* Imagen decorativa más arriba, sin tocar el borde */
   .imagen-fondo-decorativa {
-    bottom: 240px;
+    bottom: 260px;
     left: 15px;
     width: 90%;
   }
 
   /* Bañera más grande y centrada */
   .imagen-patito {
-    width: 260px;
-    top: 140px;
+    width: 280px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
   }
