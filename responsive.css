@@ -184,10 +184,10 @@
 /* ================================================================================ */
 @media (max-width: 390px) {
   .imagen-circular {
-    width: 308px !important;           /* 324px - 16px */
-    height: 308px !important;
-    max-width: 308px !important;
-    max-height: 308px !important;
+    width: 286px !important;           /* 324px - 16px */
+    height: 286px !important;
+    max-width: 286px !important;
+    max-height: 286px !important;
     animation: girar 6s linear infinite !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -195,7 +195,7 @@
   }
 
   .patito-flotante {
-    width: 334px !important;           /* 350px - 16px */
+    width: 280px !important;
     top: 95px !important;
   }
 }
