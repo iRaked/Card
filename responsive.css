@@ -83,35 +83,35 @@
 /* ================================================================================ */
 @media (max-width: 400px) {
   .bloque-textos {
-    bottom: 240px; /* antes 20px */
+    bottom: 255px; /* antes 240px, subimos 15px */
     margin-top: 0;
     position: relative;
-      outline: 2px solid red !important;
+      outline: 2px solid yellow !important;
   }
 
   .imagen-patito {
-    top: 240px; /* antes 180px */
+    top: 255px; /* antes 240px, bajamos 15px */
     left: 50%;
     transform: translateX(-50%);
     width: 290px;
   }
 
   .imagen-fondo-decorativa {
-    bottom: 360px; /* antes 340px */
+    bottom: 360px;
     left: 15px;
     width: 90%;
   }
 
   .evento-titulo,
   .evento-nombre {
-    font-size: 3.4rem;
+    font-size: 3.2rem; /* antes 3.4rem */
   }
 
   .evento-linea {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* antes 1.8rem */
   }
 
   .evento-hora {
-    font-size: 2.2rem;
+    font-size: 2rem; /* antes 2.2rem */
   }
 }
