@@ -127,9 +127,7 @@
   .seccion-evento {
     padding-top: 6rem !important; /* antes 12rem */
   }
-}
 
-@media (max-width: 400px) {
   .bloque-textos {
     bottom: 290px; /* antes 280px, bajamos 10px para compensar la tipografia */
     margin-top: 0;
