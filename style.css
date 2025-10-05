@@ -571,8 +571,7 @@
 }
 
 .linea-texto.invitacion {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
+  font-size: 3.2rem;
   color: #fff000;
   margin: 1.5rem 0;
   line-height: 1.6;
@@ -584,19 +583,21 @@
   font-family: 'Great Vibes', cursive;
   display: inline-block;
   padding: 1rem 2rem;
-  font-size: 1.6rem;
-  color: white;
+  font-size: 2rem;
+  color: #ffda5d;
   background-color: #0080ff;
-  border-radius: 8px;
+  border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-  transition: background-color 0.3s ease;
+  border: 2px solid #0050ff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 1rem;
 }
 
 .boton-mapa:hover,
 .boton-confirmacion:hover {
   background-color: #0000ff;
+  transform: scale(1.05);
 }
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ S6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 .seccion-final {
