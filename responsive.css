@@ -72,10 +72,13 @@
   }
 
   .imagen-circular {
-    width: 400px !important;
-    max-width: 400px !important;
-    height: 400px !important;
-    max-height: 400px !important;
+    width: 90% !important; /* ← adaptativo, no fijo */
+    max-width: 320px !important; /* ← ceremonialmente más pequeño que en Note */
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
 
   .patito-flotante {
