@@ -63,7 +63,6 @@
   .seccion-final {
     margin: 6rem auto 6rem auto !important;
     padding: 2rem 1rem !important;
-      outline: 2px solid yellow !important;
   }
 
   .titulo-salida {
@@ -77,6 +76,7 @@
   .patito-flotante {
     top: 100px !important; /* Base 100px, bajamos 20px */
     width: 320px !important;
+      outline: 2px solid yellow !important;
   }
 }
 
