@@ -607,7 +607,8 @@
 .imagen-circular {
   position: relative;
   margin-top: 0; /* espacio debajo del patito */
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
   animation: girar 6s linear infinite;
   border-radius: 50%;
