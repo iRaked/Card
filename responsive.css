@@ -125,7 +125,7 @@
 /* ================================================================================ */
 @media (max-width: 400px) {
   .seccion-evento {
-    padding-top: 10rem !important; /* antes 12rem */
+    padding-top: 6rem !important; /* antes 12rem */
   }
 }
 
