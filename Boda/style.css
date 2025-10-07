@@ -257,6 +257,31 @@ body {
   top: 60px;
   left: 405px;
 }
+
+/* 📱 iFone: solo elevación */
+@media screen and (max-width: 499px) {
+  .btn-inicio  { bottom: 13px; }
+  .btn-mail    { bottom: 20px; }
+  .btn-clock   { bottom: 27px; }
+  .btn-iglesia { bottom: 27px; }
+  .btn-party   { bottom: 20px; }
+  .btn-msj     { bottom: 13px; }
+}
+
+/* 📳 Fon: elevación + tamaño + posición */
+@media screen and (max-width: 419px) {
+  .botones-superiores img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-inicio  { bottom: 13px; left: 24px; }
+  .btn-mail    { bottom: 20px; left: 84px; }
+  .btn-clock   { bottom: 27px; left: 144px; }
+  .btn-iglesia { bottom: 27px; left: 204px; }
+  .btn-party   { bottom: 20px; left: 264px; }
+  .btn-msj     { display: none; } /* se oculta para evitar desbordes */
+}
 /* =====================================01=========================================== */
 /*
 .section1 {
