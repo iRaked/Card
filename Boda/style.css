@@ -258,22 +258,22 @@ body {
   left: 405px;
 }
 
-/* 📱 iFone — 480px - Antes 430px */
+/* 📱 iFone — 480px - Antes 430px y 400px */
 @media screen and (max-width: 480px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
   }
 
-  .btn-inicio  { top: 58px !important; left: 24px !important; }
-  .btn-mail    { top: 53px !important; left: 84px !important; }
-  .btn-clock   { top: 43px !important; left: 144px !important; }
-  .btn-iglesia { top: 43px !important; left: 204px !important; }
-  .btn-party   { top: 53px !important; left: 264px !important; }
-  .btn-msj     { top: 58px !important; left: 324px !important; }
+  .btn-inicio  { top: 61px !important; left: 24px !important; }
+  .btn-mail    { top: 56px !important; left: 84px !important; }
+  .btn-clock   { top: 46px !important; left: 144px !important; }
+  .btn-iglesia { top: 46px !important; left: 204px !important; }
+  .btn-party   { top: 56px !important; left: 264px !important; }
+  .btn-msj     { top: 61px !important; left: 324px !important; }
 }
 
-/* 📳 Fon — 420px - Antes 400px */
+/* 📳 Fon — 420px */
 @media screen and (max-width: 420px) {
   body {
     overflow-x: hidden !important;
@@ -289,6 +289,17 @@ body {
   .btn-clock   { top: 28px !important; left: 144px !important; }
   .btn-iglesia { top: 28px !important; left: 204px !important; }
   .btn-party   { top: 38px !important; left: 264px !important; }
+
+  /* Eliminación total del 6º botón */
+  .btn-msj {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
 }
 /* =====================================01=========================================== */
 /*
