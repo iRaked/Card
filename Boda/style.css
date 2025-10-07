@@ -258,33 +258,33 @@ body {
   left: 405px;
 }
 
-/* 📱 iFone: 430px — elevación + compactación */
+/* 📱 iFone: 430px */
 @media screen and (max-width: 430px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
   }
 
-  .btn-inicio  { bottom: 13px; }
-  .btn-mail    { bottom: 20px; }
-  .btn-clock   { bottom: 27px; }
-  .btn-iglesia { bottom: 27px; }
-  .btn-party   { bottom: 20px; }
-  .btn-msj     { bottom: 13px; }
+  .btn-inicio  { bottom: 18px; }
+  .btn-mail    { bottom: 25px; }
+  .btn-clock   { bottom: 32px; }
+  .btn-iglesia { bottom: 32px; }
+  .btn-party   { bottom: 25px; }
+  /* btn-msj omitido visualmente */
 }
 
-/* 📳 Fon: 400px — elevación + compactación + reposicionamiento + ocultar btn-msj */
+/* 📳 Fon: 400px */
 @media screen and (max-width: 400px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
   }
 
-  .btn-inicio  { bottom: 13px; left: 24px; }
-  .btn-mail    { bottom: 20px; left: 84px; }
-  .btn-clock   { bottom: 27px; left: 144px; }
-  .btn-iglesia { bottom: 27px; left: 204px; }
-  .btn-party   { bottom: 20px; left: 264px; }
+  .btn-inicio  { bottom: 23px; left: 24px; }
+  .btn-mail    { bottom: 30px; left: 84px; }
+  .btn-clock   { bottom: 37px; left: 144px; }
+  .btn-iglesia { bottom: 37px; left: 204px; }
+  .btn-party   { bottom: 30px; left: 264px; }
   .btn-msj     { display: none; }
 }
 /* =====================================01=========================================== */
