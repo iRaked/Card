@@ -263,10 +263,12 @@ body {
 }
 
 /* 📱 iFone — 480px - Antes 430px y 400px */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
+        outline: 2px solid red;
+        outline-offset: 4px;
   }
 
   .btn-inicio  { top: 61px !important; left: 24px !important; }
@@ -1015,4 +1017,3 @@ body {
   background: transparent;
   pointer-events: none;
 }
-
