@@ -1,976 +1,272 @@
-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 500;
-  color: #5c4200;
-  font-size: 20px;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.fecha-ceremonial,
-.fecha-ceremonial * {
-  font-family: 'Georgia', serif !important;
-  font-style: normal !important;
-}
-
-/* 🔄 RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* 🌫️ Fondo principal fijo */
-.background {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 795px;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-/* ✨ Fondo decorativo fijo */
-.decorativo {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 795px;
-  z-index: 2;
-  pointer-events: none;
-  overflow: hidden;
-  
-  opacity: 0.5;
-}
-
-.decorativo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-/* 🎁 Contenedor principal con scroll */
-.main-card {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  z-index: 10;
-  overflow-y: scroll;
-  height: 100vh;
-  /*scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;*/
-}
-
-/* 🧱 Secciones universales 
-[class^="section"] {
-  scroll-snap-align: start;
-  outline: 2px solid red;
-}*/
-[class^="section"] {
-  width: 100%;
-  height: 750px;
-  padding: 32px 16px;
-  border-radius: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: none;
-  z-index: 10;
-}
-/* ====================================COVER========================================== */
-/* 📱 Entrada a la Card */
-.entrada-card {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 🖼️ Portada que cubre todo */
-.portada-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* 🔘 Botón animado como imagen */
-.boton-card {
-  width: 120px;
-  height: auto;
-  cursor: pointer;
-  animation: zoomInOut 2s infinite;
-  z-index: 1;
-}
-
-/* 🖥️ Ocultar entrada en escritorio */
-@media (min-width: 601px) {
-  .entrada-card {
-    display: none;
-  }
-}
-
-.contenedor-boton-card {
-  position: relative;
-  width: 120px;
-  height: auto;
-  animation: zoomInOut 2s infinite;
-  cursor: pointer;
-}
-
-.boton-card {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.texto-card {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
-  color: #d4af37;
-  text-shadow: 0 0 5px rgba(0,0,0,0.2);
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Animación zoom in/out */
-@keyframes zoomInOut {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-/* =====================================BTN=========================================== */
-/* 🧭 Botonera fija en la parte baja */
-.botonera {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  z-index: 9999;
-  pointer-events: none; /* evita que la imagen base interfiera */
-}
-
-/* 🎀 Imagen base */
-.ribbon {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 🧭 Nuevo contenedor ritualizado */
-.boton-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* 🎯 Contenedor de botones flotantes */
-.botones-superiores {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: auto; /* reactiva clics solo en los botones */
-}
-
-/* ✨ Botón base */
-.botones-superiores button {
-  position: absolute;
-  background: transparent;
-  border: 2px solid transparent;
-  padding: 8px;
-  border-radius: 50%;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.botones-superiores button:hover {
-  transform: scale(1.1);
-  border-color: #d4af37; /* contorno dorado */
-}
-
-.botones-superiores img {
-  width: 40px;
-  height: 40px;
-}
-
-/* 📍 Posicionamiento manual por clase */
-.btn-inicio {
-  bottom: 8px;
-  left: 40px;
-  transform: none;
-}
-
-.btn-mail {
-  bottom: 15px;
-  left: 115px;
-  transform: none;
-}
-
-.btn-clock {
-  bottom: 22px;
-  left: 185px;
-  transform: none;
-}
-
-.btn-iglesia {
-  bottom: 22px;
-  left: 260px;
-  transform: none;
-}
-
-.btn-party {
-  bottom: 15px;
-  left: 330px;
-  transform: none;
-}
-
-.btn-msj {
-  bottom: 8px;
-  left: 390px;
-  transform: none;
-}
-/* =====================================01=========================================== */
-/*
-.section1 {
-  outline-color: red;
-}*/
-
-/* ✨ Textos dorados */
-.nombres1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 80px;
-  color: #bfa76f;
-  text-align: center;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(191, 167, 0, 0.8);
-}
-
-.union1 {
-  font-size: 50px;
-  font-weight: 500;
-  font-family: 'Georgia', serif;
-  color: #d4af37;
-  text-align: center;
-  margin: 8px 0;
-}
-
-/* FECHA 1 */
-.fecha-ceremonial {
-  text-align: center;
-  font-family: 'Georgia', serif;
-  margin: 32px 0;
-}
-
-.dia-semana {
-  font-size: 40px;
-  font-weight: 600;
-  color: #d4af37; /* dorado ceremonial */
-  margin-bottom: 12px;
-}
-
-.contenedor-fecha {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px; /* más cerca del círculo */
-}
-
-/* 🌙 Mes y Año entre líneas */
-.bloque-mes,
-.bloque-anio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px; /* líneas más pegadas */
-}
-
-.linea {
-  width: 150px;
-  height: 2px;
-  background-color: #d4af37;
-}
-
-.mes,
-.anio {
-  font-size: 30px; /* más grande */
-  font-weight: 600;
-  color: #5c4200;
-}
-
-/* ☀️ Día envuelto en círculo dorado */
-.bloque-dia {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid #d4af37;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dia-numero {
-  font-size: 38px;
-  font-weight: 700;
-  color: #5c4200;
-}
-
-
-.nombres2 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-/* 🖼️ Separador */
-.Separador {
-  width: 400px;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-}
-
-/* =====================================02=========================================== */
-/* 🖼️ Imagen con marco blanco e inclinación */
-.contenedor-imagen {
-  border: 12px solid #fff;
-  display: inline-block;
-  transform: rotate(-10deg);
-  margin: 0 auto 24px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  max-width: 80%;
-}
-
-.contenedor-imagen img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.nombres2 {
-  font-size: 40px;
-  font-weight: 600;
-  font-family: 'Georgia', serif;
-  color: #d4af37;
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-/* =====================================03=========================================== */
-.section3 {
-  overflow-x: visible;
-  padding-right: 1rem;
-}
-
-.cubo {
-  width: calc(100% - 2rem);
-  max-width: 420px;
-  height: auto;
-  background-color: #f8e79940;
-  border-radius: 30px;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 2px solid #b8860b;
-  backdrop-filter: blur(2px);
-  z-index: 10;
-  will-change: transform, opacity;
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  margin: 0 auto 24px auto;
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.cubo.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* 🖼️ Imagen dentro del cubo */
-.imagen-cubo {
-  width: 60%;
-  height: auto;
-  margin-bottom: 32px;
-}
-
-/* ✨ Frase bíblica con espaciado */
-.frase-amor {
-  font-size: 20px;
-  font-weight: 600;
-  color: #5c4200;
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.referencia {
-  display: block;
-  font-size: 14px;
-  margin-top: 8px;
-  color: #7a5c00;
-  font-style: italic;
-}
-/* Animacones de Entrada para Cubos */
-.cubo,
-.cubo-s11,
-.cubo-s11b {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.cubo.visible,
-.cubo-s11.visible,
-.cubo-s11b.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* =====================================04=========================================== */
-.palomas {
-  width: 50%;
-  height: auto;
-  margin: 0 auto 24px auto;
-  display: block;
-}
-
-.texto-apoyo {
-  text-align: center;
-  color: #5c4200;
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.bendicion {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.padres p {
-  font-size: 18px;
-  margin: 4px 0;
-}
-
-.invitacion {
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 32px;
-}
-
-.nuestra-boda {
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  margin-top: 12px;
-  color: #d4af37; /* dorado sólido */
-}
-/* =====================================05=========================================== */
-
-/* 🖼️ Imagen simbólica */
-.contador {
-  width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto 32px auto;
-}
-/* 📅 Fecha fuera del contador */
-.fecha-boda {
-  font-size: 25px;
-  font-weight: 600;
-  color: #5c4200;
-  font-family: 'Georgia', serif;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-/* 🕰️ Contador con colores del cubo */
-.temporizador {
-  width: 320px;
-  margin: 0 auto 32px auto;
-  padding: 1.5rem;
-  border-radius: 24px;
-  background-color: #f8e79940; /* dorado translúcido */
-  border: 2px solid #b8860b;   /* borde dorado profundo */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  text-align: center;
-  z-index: 10;
-}
-
-/* ✨ Título dentro del contador */
-.titulo-boda {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #d4af37; /* dorado sólido */
-  font-family: 'Georgia', serif;
-}
-
-/* ⏳ Datos simbólicos */
-.datos-tiempo {
-  font-size: 22px;
-  font-weight: 500;
-  color: #5c4200;
-  font-family: 'Georgia', serif;
-}
-
-.section5 .espacio-temporizador {
-  margin-bottom: 48px; /* ajusta según el aire que necesites */
-}
-/* ====================================06&7========================================== */
-/* 🧱 Contenedor relativo */
-.columna-fotos {
-  position: relative;
-  width: 320px;
-  height: 840px;
-  margin: 0 auto;
-}
-
-/* 📸 Base para todas las fotos */
-.columna-fotos img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  border: 12px solid #fff;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* 🔄 Foto 1 */
-.pic1 {
-  top: 0;
-  left: 0;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-
-/* 🔄 Foto 2 */
-.pic2 {
-  top: 350px;
-  left: 0;
-  transform: rotate(10deg);
-  z-index: 2;
-}
-
-/* 🔄 Foto 3 */
-.pic3 {
-  top: 650px;
-  left: 0;
-  transform: rotate(-10deg);
-  z-index: 3;
-}
-
-/* 🔄 Foto 4 */
-.pic4 {
-  top: 950px;
-  left: 0;
-  transform: rotate(10deg);
-  z-index: 4;
-}
-
-.section7 {
-  position: relative;
-  height: 750px;
-  width: 100%;
-}
-
-.section7 .Separador {
-  position: absolute;
-  top: 700px; /* ajusta según el espacio que quieras debajo de las imágenes */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-/* =====================================08=========================================== */
-.section8 {
-  text-align: center;
-  padding: 48px 24px;
-  font-family: 'Georgia', serif;
-  color: #5c4200;
-}
-
-.iglesia {
-  width: 60%;
-  max-width: 480px;
-  display: block;
-  margin: 0 auto 32px auto;
-}
-
-.info-ceremonia .texto-ceremonia {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.nombre-parroquia {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.direccion-parroquia {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-/* ✨ Botón dorado con degradado */
-.boton-recepcion {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 28px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(
-    to bottom,
-    #d4af37 0%,
-    #f5c842 10%,
-    #fbdc8b 15%,
-    #ffffff 25%,
-    #fbdc8b 35%,
-    #f5c842 55%,
-    #d4af37 100%
-  );
-  border: 2px solid #d4af37;
-  border-radius: 16px;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.boton-recepcion:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.icono-iglesia {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.section8 .espacio-boton {
-  margin-bottom: 48px; /* Ajusta según el aire que necesites */
-}
-
-/* =====================================09=========================================== */
-.section9 {
-  position: relative;
-  height: 750px;
-  width: 100%;
-  text-align: center;
-  padding: 48px 24px;
-  font-family: 'Georgia', serif;
-  color: #5c4200;
-  overflow: hidden;
-}
-
-.pastel {
-  width: 40%;
-  max-width: 480px;
-  display: block;
-  margin: 0 auto 32px auto;
-}
-
-.info-recepcion .titulo-recepcion {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.texto-recepcion {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.direccion-recepcion {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.section9 .espacio-boton {
-  margin-bottom: 48px; /* aire ritual entre botón y separador */
-}
-/* ====================================10========================================== */
-.section10 {
-  position: relative;
-  height: 750px;
-  width: 100%;
-}
-
-/* 🧱 Contenedor relativo */
-.section10 .columna-fotos {
-  position: relative;
-  width: 320px;
-  height: 840px;
-  margin: 0 auto;
-}
-
-/* 📸 Base para todas las fotos */
-.section10 .columna-fotos img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  border: 12px solid #fff;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* 🔄 Foto 6 (P7) */
-.pic6 {
-  top: 0;
-  left: 0;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-
-/* 🔄 Foto 7 (P6) */
-.pic7 {
-  top: 200px;
-  left: 0;
-  transform: rotate(10deg);
-  z-index: 2;
-}
-
-/* ✂️ Separador universal */
-.section10 .Separador {
-  position: absolute;
-  top: 700px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-/* =====================================11=========================================== */
-.section11 {
-  position: relative;
-  height: auto;
-  width: 100%;
-  text-align: center;
-  padding: 52px 24px; /* se aumentó el padding-top para liberar el recorte superior */
-  font-family: 'Georgia', serif;
-  color: #5c4200;
-  overflow: hidden;
-}
-
-/* 🧱 Cubo exclusivo para Vestimenta */
-.cubo-s11 {
-  width: calc(100% - 2rem);
-  max-width: 400px;
-  height: auto;
-  background-color: #f8e79940; /* tono base dorado suave */
-  border-radius: 30px;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 2px solid #b8860b; /* borde dorado profundo */
-  backdrop-filter: blur(2px);
-  z-index: 10;
-  will-change: transform, opacity;
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  margin: 0 auto 32px auto;
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.cubo-s11.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.imagen-cubo-s11 {
-  width: 150px;
-  height: auto;
-  margin-bottom: 16px;
-  transform: rotate(10deg);
-}
-
-/* 🎁 Segundo cubo exclusivo para Regalo */
-.cubo-s11b {
-  width: calc(100% - 2rem);
-  max-width: 400px;
-  height: auto;
-  background-color: #f8e79940;
-  border-radius: 30px;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 2px solid #b8860b;
-  backdrop-filter: blur(2px);
-  z-index: 10;
-  will-change: transform, opacity;
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  margin: 0 auto 32px auto;
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.cubo-s11b.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.imagen-cubo-s11b {
-  width: 120px;
-  height: auto;
-  margin-bottom: 16px;
-  transform: rotate(10deg);
-}
-
-/* ✍️ Textos compartidos */
-.titulo-cubo {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.texto-cubo {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-/* ✂️ Separador universal */
-.section11 .Separador {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-/* =====================================12=========================================== */
-.section12 {
-  position: relative;
-  height: 600px;
-  width: 100%;
-  text-align: center;
-  padding: 64px 24px 48px 24px;
-  font-family: 'Georgia', serif;
-  color: #5c4200;
-  overflow: hidden;
-}
-
-/* 📝 Mensaje inicial */
-.mensaje-final h2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 32px;
-}
-
-/* ✨ Botones dorados con ícono blanco */
-.botones-confirmacion {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-
-.boton-recepcion {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 28px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(
-    to bottom,
-    #d4af37 0%,
-    #f5c842 10%,
-    #fbdc8b 15%,
-    #ffffff 25%,
-    #fbdc8b 35%,
-    #f5c842 55%,
-    #d4af37 100%
-  );
-  border: 2px solid #d4af37;
-  border-radius: 16px;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  gap: 12px;
-}
-
-.boton-recepcion:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.icono-wsp {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1); /* asegura que el ícono sea blanco */
-}
-
-/* ✅ Mensaje de confirmación */
-.mensaje-confirmado p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-top: 16px;
-}
-
-/* ✂️ Separador universal */
-.section12 .Separador {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-/* =====================================13=========================================== */
-.section13 {
-  height: 120px; /* puedes ajustar según el respiro que necesites */
-  background: transparent;
-  pointer-events: none;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Boda</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/SG.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="text/javascript">
+    document.onkeydown = function(){return false};
+    document.oncontextmenu = function(){return false};
+  </script>
+</head>
+<body>
+    <!-- Song Card -->
+    <audio id="musica-fondo" loop>
+      <source src="assets/audio/Il%20Divo%20-%20Hasta%20mi%20final.MP3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+    
+    <!-- Entrada a la Card -->
+    <div class="entrada-card">
+      <img src="assets/img/Cover.png" alt="Portada" class="portada-card">
+
+      <div class="contenedor-boton-card">
+        <img src="assets/img/Button.png" alt="Botón de entrada" id="activarSmartCard" class="boton-card">
+        <p class="texto-card">Entra</p>
+      </div>
+    </div>
+
+  <!-- Fondo principal universal -->
+  <div class="background">
+    <img src="assets/img/BG-Boda.png" alt="Background" />
+  </div>
+
+  <!-- Fondo decorativo complementario -->
+  <div class="decorativo">
+    <img src="assets/img/Border.png" alt="Decoration" />
+  </div>
+
+  <!-- Contenedor principal con scroll -->
+  <main class="main-card smart-card">
+    <section class="section1" id="s1">
+      <h1 class="nombres1">Sofía</h1>
+      <h2 class="union1">&</h2>
+      <h1 class="nombres1">Mateo</h1>
+    <!-- Fecha Perfeccionada -->
+      <div class="fecha-ceremonial">
+          <div class="dia-semana">Sábado</div>
+
+          <div class="contenedor-fecha">
+            <div class="bloque-mes">
+              <span class="linea"></span>
+              <span class="mes">Agosto</span>
+              <span class="linea"></span>
+            </div>
+
+            <div class="bloque-dia">
+              <span class="dia-numero">24</span>
+            </div>
+
+            <div class="bloque-anio">
+              <span class="linea"></span>
+              <span class="anio">2030</span>
+              <span class="linea"></span>
+            </div>
+          </div>
+        </div>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 2 -->
+    <section class="section2" id="s2">
+      <div class="contenedor-imagen">
+        <img src="assets/img/P1.jpg" alt="Novios" />
+      </div>
+      <h2 class="nombres2">Sofía & Mateo</h2>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 3 -->
+    <section class="section3" id="s3">
+      <div class="cubo visible">
+        <img src="assets/img/Rings.png" alt="Imagen de amor" class="imagen-cubo" />
+        <p class="frase-amor">
+          “Mi amado es mío, y yo soy suya; él apacienta entre lirios.”<br />
+          <span class="referencia">— Cantares 6:3</span>
+        </p>
+        <p class="frase-amor">
+          “Mi amado es mío, y yo suya; él reposa entre lirios. Hasta que despunte el día y huyan las sombras.”<br />
+          <span class="referencia">— Cantares 2:16–17</span>
+        </p>
+      </div>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 4 -->
+    <section class="section4" id="s4">
+      <img src="assets/img/Doves.png" alt="Palomas" class="palomas" />
+
+      <div class="texto-apoyo">
+        <p class="bendicion">Con el apoyo y bendición de nuestros padres:</p>
+
+        <div class="padres">
+          <p>David Campos Saavedra</p>
+          <p>Rocío Linares de Campos</p>
+            <br>
+          <p>Miguel Ríos Pedroza</p>
+          <p>Ángeles Rossi de Pedroza</p>
+        </div>
+
+        <p class="invitacion">
+          Nos complace en invitarles a usted y a su apreciable familia a la alegría de<br />
+          <span class="nuestra-boda">Nuestra Boda</span>
+        </p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 5 -->
+    <section class="section5" id="s5">
+      <img src="assets/img/Tempo.png" alt="Temporizador" class="contador" />
+      <p class="fecha-boda">24 de agosto de 2030</p>
+
+      <div class="temporizador espacio-temporizador">
+        <h2 class="titulo-boda">Nuestra Boda</h2>
+        <p id="temporizador" class="datos-tiempo"></p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 6 -->  
+    <section class="section6" id="s6">
+      <div class="columna-fotos">
+        <img src="assets/img/P2.jpg" alt="Foto 1" class="pic1" />
+        <img src="assets/img/P3.jpg" alt="Foto 2" class="pic2" />
+        <img src="assets/img/P4.jpg" alt="Foto 3" class="pic3" />
+        <img src="assets/img/P5.jpg" alt="Foto 4" class="pic4" />
+      </div>
+    </section>
+    <!-- Sección 7 -->
+    <section class="section7" id="s7">
+        <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 8 -->
+    <section class="section8" id="s8">
+      <img src="assets/img/Church.png" alt="Iglesia" class="iglesia" />
+
+      <div class="info-ceremonia">
+        <p class="texto-ceremonia">La ceremonia se llevará acabo en:</p>
+        <h2 class="nombre-parroquia">Parroquia San Francisco de Asís</h2>
+        <p class="direccion-parroquia">
+          Prolongación José María Morelos y Pavón 90<br />
+          Centro, Navolato, Sinaloa<br />
+          <strong>14:00 Hrs</strong>
+        </p>
+
+        <a href="https://www.google.com/maps?q=Parroquia+San+Francisco+de+Asis+Navolato+Sinaloa" target="_blank" class="boton-recepcion espacio-boton">
+          <i class="fa-solid fa-church" style="font-size: 24px; color: #ffffff;"></i> Ceremonia
+        </a>
+      </div>
+        <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 9 -->  
+    <section class="section9" id="s9">
+      <img src="assets/img/Cake.png" alt="Pastel" class="pastel" />
+
+      <div class="info-recepcion">
+        <h2 class="titulo-recepcion">La Recepción</h2>
+        <p class="texto-recepcion">
+          Después de la ceremonia los esperamos en:
+        </p>
+        <p class="direccion-recepcion">
+          Hacienda Alameda Palacio<br />
+          Almada 280, Navolato, Sinaloa
+        </p>
+
+        <a href="https://www.google.com/maps?q=Hacienda+Alameda+Palacio+Navolato+Sinaloa" target="_blank" class="boton-recepcion espacio-boton">
+          <i class="fa-solid fa-cake-candles" style="font-size: 24px; color: #ffffff;"></i> Recepción
+        </a>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 10 -->
+    <section class="section10" id="s10">
+      <div class="columna-fotos">
+        <img src="assets/img/P7.jpg" alt="Foto 6" class="pic6" />
+        <img src="assets/img/P6.jpg" alt="Foto 7" class="pic7" />
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 11 -->
+    <section class="section11" id="s11">
+      <div class="contenedor-cubo">
+        <div class="cubo-s11 visible">
+          <img src="assets/img/Vestimenta.png" alt="Vestimenta" class="imagen-cubo-s11" />
+          <h2 class="titulo-cubo">Código de Vestimenta</h2>
+          <p class="texto-cubo">Formal</p>
+        </div>
+      </div>
+
+      <div class="contenedor-cubo">
+        <div class="cubo-s11b visible">
+          <img src="assets/img/Gift2.png" alt="Regalo" class="imagen-cubo-s11b" />
+          <h2 class="titulo-cubo">El regalo es alternativo</h2>
+          <p class="texto-cubo">Pero si quieres tener un detalle con nosotros,<br />habrá mesa de regalos</p>
+        </div>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 12 -->
+    <section class="section12" id="s12">
+      <div class="mensaje-final">
+        <h2>Por favor,<br />Confirma tu asistencia<br />Vía WhatsApp</h2>
+      </div>
+
+      <div class="botones-confirmacion">
+        <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="boton-recepcion">
+          <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #ffffff;"></i>
+          Confirma con Mateo
+        </a>
+
+        <a href="https://wa.me/521YYYYYYYYYY" target="_blank" class="boton-recepcion">
+          <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #ffffff;"></i>
+          Confirma con Sofía
+        </a>
+      </div>
+
+      <div class="mensaje-confirmado">
+        <p>Una vez que confirmes<br />te agregaremos<br />a la lista de invitados</p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 13 (espacio de respiro) -->
+    <section class="section13" id="s13"></section>
+    
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ BTN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+    <nav class="botonera">
+      <img src="assets/img/R3.png" alt="Botonera" class="ribbon" />
+
+      <div class="botones-superiores">
+        <button onclick="scrollToSection('s1')" class="btn-inicio">
+          <img src="assets/icons/iDress.png" alt="Invitación">
+        </button>
+        <button onclick="scrollToSection('s4')" class="btn-mail">
+          <img src="assets/icons/iMail.png" alt="Familia">
+        </button>
+        <button onclick="scrollToSection('s5')" class="btn-clock">
+          <img src="assets/icons/iClock.png" alt="Temporizador">
+        </button>
+        <button onclick="scrollToSection('s8')" class="btn-iglesia">
+          <img src="assets/icons/iChurch.png" alt="Ceremonia">
+        </button>
+        <button onclick="scrollToSection('s9')" class="btn-party">
+          <img src="assets/icons/iCake.png" alt="Recepción">
+        </button>
+        <button onclick="scrollToSection('s12')" class="btn-msj">
+          <img src="assets/icons/iWsp.png" alt="Confirmación">
+        </button>
+      </div>
+    </nav>
+      
+  </main>
+
+</body>
+</html>
