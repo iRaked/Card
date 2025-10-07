@@ -257,39 +257,6 @@ body {
   top: 60px;
   left: 405px;
 }
-
-@media screen and (max-width: 430px) {
-  .botones-superiores img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .btn-inicio  { top: 55px !important; }
-  .btn-mail    { top: 50px !important; }
-  .btn-clock   { top: 40px !important; }
-  .btn-iglesia { top: 40px !important; }
-  .btn-party   { top: 50px !important; }
-  .btn-msj     { display: none !important; }
-}
-
-@media screen and (max-width: 400px) {
-  .botones-superiores img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .botonera {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-
-  .btn-inicio  { top: 50px !important; left: 24px !important; }
-  .btn-mail    { top: 45px !important; left: 84px !important; }
-  .btn-clock   { top: 35px !important; left: 144px !important; }
-  .btn-iglesia { top: 35px !important; left: 204px !important; }
-  .btn-party   { top: 45px !important; left: 264px !important; }
-  .btn-msj     { display: none !important; left: auto !important; }
-}
 /* =====================================01=========================================== */
 /*
 .section1 {
