@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Boda</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/SG.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="text/javascript">
+    document.onkeydown = function(){return false};
+    document.oncontextmenu = function(){return false};
+  </script>
+</head>
+<body>
+    <!-- Song Card -->
+    <audio id="musica-fondo" loop>
+      <source src="assets/audio/Il%20Divo%20-%20Hasta%20mi%20final.MP3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+    
+    <!-- Entrada a la Card -->
+    <div class="entrada-card">
+      <img src="assets/img/Cover.png" alt="Portada" class="portada-card">
+
+      <div class="contenedor-boton-card">
+        <img src="assets/img/Button.png" alt="Botón de entrada" id="activarSmartCard" class="boton-card">
+        <p class="texto-card">Entra</p>
+      </div>
+    </div>
+
+  <!-- Fondo principal universal -->
+  <div class="background">
+    <img src="assets/img/BG-Boda.png" alt="Background" />
+  </div>
+
+  <!-- Fondo decorativo complementario -->
+  <div class="decorativo">
+    <img src="assets/img/Border.png" alt="Decoration" />
+  </div>
+
+  <!-- Contenedor principal con scroll -->
+  <main class="main-card smart-card">
+    <section class="section1" id="s1">
+      <h1 class="nombres1">Sofía</h1>
+      <h2 class="union1">&</h2>
+      <h1 class="nombres1">Mateo</h1>
+    <!-- Fecha Perfeccionada -->
+      <div class="fecha-ceremonial">
+          <div class="dia-semana">Sábado</div>
+
+          <div class="contenedor-fecha">
+            <div class="bloque-mes">
+              <span class="linea"></span>
+              <span class="mes">Agosto</span>
+              <span class="linea"></span>
+            </div>
+
+            <div class="bloque-dia">
+              <span class="dia-numero">24</span>
+            </div>
+
+            <div class="bloque-anio">
+              <span class="linea"></span>
+              <span class="anio">2030</span>
+              <span class="linea"></span>
+            </div>
+          </div>
+        </div>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 2 -->
+    <section class="section2" id="s2">
+      <div class="contenedor-imagen">
+        <img src="assets/img/P1.jpg" alt="Novios" />
+      </div>
+      <h2 class="nombres2">Sofía & Mateo</h2>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 3 -->
+    <section class="section3" id="s3">
+      <div class="cubo visible">
+        <img src="assets/img/Rings.png" alt="Imagen de amor" class="imagen-cubo" />
+        <p class="frase-amor">
+          “Mi amado es mío, y yo soy suya; él apacienta entre lirios.”<br />
+          <span class="referencia">— Cantares 6:3</span>
+        </p>
+        <p class="frase-amor">
+          “Mi amado es mío, y yo suya; él reposa entre lirios. Hasta que despunte el día y huyan las sombras.”<br />
+          <span class="referencia">— Cantares 2:16–17</span>
+        </p>
+      </div>
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 4 -->
+    <section class="section4" id="s4">
+      <img src="assets/img/Doves.png" alt="Palomas" class="palomas" />
+
+      <div class="texto-apoyo">
+        <p class="bendicion">Con el apoyo y bendición de nuestros padres:</p>
+
+        <div class="padres">
+          <p>David Campos Saavedra</p>
+          <p>Rocío Linares de Campos</p>
+            <br>
+          <p>Miguel Ríos Pedroza</p>
+          <p>Ángeles Rossi de Pedroza</p>
+        </div>
+
+        <p class="invitacion">
+          Nos complace en invitarles a usted y a su apreciable familia a la alegría de<br />
+          <span class="nuestra-boda">Nuestra Boda</span>
+        </p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 5 -->
+    <section class="section5" id="s5">
+      <img src="assets/img/Tempo.png" alt="Temporizador" class="contador" />
+      <p class="fecha-boda">24 de agosto de 2030</p>
+
+      <div class="temporizador espacio-temporizador">
+        <h2 class="titulo-boda">Nuestra Boda</h2>
+        <p id="temporizador" class="datos-tiempo"></p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 6 -->  
+    <section class="section6" id="s6">
+      <div class="columna-fotos">
+        <img src="assets/img/P2.jpg" alt="Foto 1" class="pic1" />
+        <img src="assets/img/P3.jpg" alt="Foto 2" class="pic2" />
+        <img src="assets/img/P4.jpg" alt="Foto 3" class="pic3" />
+        <img src="assets/img/P5.jpg" alt="Foto 4" class="pic4" />
+      </div>
+    </section>
+    <!-- Sección 7 -->
+    <section class="section7" id="s7">
+        <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 8 -->
+    <section class="section8" id="s8">
+      <img src="assets/img/Church.png" alt="Iglesia" class="iglesia" />
+
+      <div class="info-ceremonia">
+        <p class="texto-ceremonia">La ceremonia se llevará acabo en:</p>
+        <h2 class="nombre-parroquia">Parroquia San Francisco de Asís</h2>
+        <p class="direccion-parroquia">
+          Prolongación José María Morelos y Pavón 90<br />
+          Centro, Navolato, Sinaloa<br />
+          <strong>14:00 Hrs</strong>
+        </p>
+
+        <a href="https://www.google.com/maps?q=Parroquia+San+Francisco+de+Asis+Navolato+Sinaloa" target="_blank" class="boton-recepcion espacio-boton">
+          <i class="fa-solid fa-church" style="font-size: 24px; color: #ffffff;"></i> Ceremonia
+        </a>
+      </div>
+        <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 9 -->  
+    <section class="section9" id="s9">
+      <img src="assets/img/Cake.png" alt="Pastel" class="pastel" />
+
+      <div class="info-recepcion">
+        <h2 class="titulo-recepcion">La Recepción</h2>
+        <p class="texto-recepcion">
+          Después de la ceremonia los esperamos en:
+        </p>
+        <p class="direccion-recepcion">
+          Hacienda Alameda Palacio<br />
+          Almada 280, Navolato, Sinaloa
+        </p>
+
+        <a href="https://www.google.com/maps?q=Hacienda+Alameda+Palacio+Navolato+Sinaloa" target="_blank" class="boton-recepcion espacio-boton">
+          <i class="fa-solid fa-cake-candles" style="font-size: 24px; color: #ffffff;"></i> Recepción
+        </a>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 10 -->
+    <section class="section10" id="s10">
+      <div class="columna-fotos">
+        <img src="assets/img/P7.jpg" alt="Foto 6" class="pic6" />
+        <img src="assets/img/P6.jpg" alt="Foto 7" class="pic7" />
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 11 -->
+    <section class="section11" id="s11">
+      <div class="contenedor-cubo">
+        <div class="cubo-s11 visible">
+          <img src="assets/img/Vestimenta.png" alt="Vestimenta" class="imagen-cubo-s11" />
+          <h2 class="titulo-cubo">Código de Vestimenta</h2>
+          <p class="texto-cubo">Formal</p>
+        </div>
+      </div>
+
+      <div class="contenedor-cubo">
+        <div class="cubo-s11b visible">
+          <img src="assets/img/Gift2.png" alt="Regalo" class="imagen-cubo-s11b" />
+          <h2 class="titulo-cubo">El regalo es alternativo</h2>
+          <p class="texto-cubo">Pero si quieres tener un detalle con nosotros,<br />habrá mesa de regalos</p>
+        </div>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 12 -->
+    <section class="section12" id="s12">
+      <div class="mensaje-final">
+        <h2>Por favor,<br />Confirma tu asistencia<br />Vía WhatsApp</h2>
+      </div>
+
+      <div class="botones-confirmacion">
+        <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="boton-recepcion">
+          <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #ffffff;"></i>
+          Confirma con Mateo
+        </a>
+
+        <a href="https://wa.me/521YYYYYYYYYY" target="_blank" class="boton-recepcion">
+          <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #ffffff;"></i>
+          Confirma con Sofía
+        </a>
+      </div>
+
+      <div class="mensaje-confirmado">
+        <p>Una vez que confirmes<br />te agregaremos<br />a la lista de invitados</p>
+      </div>
+
+      <img src="assets/img/Divider1.png" alt="Separador" class="Separador" />
+    </section>
+    <!-- Sección 13 (espacio de respiro) -->
+    <section class="section13" id="s13"></section>
+    
+<!--━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ BTN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-->
+    <nav class="botonera">
+      <img src="assets/img/R3.png" alt="Botonera" class="ribbon" />
+
+      <div class="botones-superiores">
+        <button onclick="scrollToSection('s1')" class="btn-inicio">
+          <img src="assets/icons/iDress.png" alt="Invitación">
+        </button>
+        <button onclick="scrollToSection('s4')" class="btn-mail">
+          <img src="assets/icons/iMail.png" alt="Familia">
+        </button>
+        <button onclick="scrollToSection('s5')" class="btn-clock">
+          <img src="assets/icons/iClock.png" alt="Temporizador">
+        </button>
+        <button onclick="scrollToSection('s8')" class="btn-iglesia">
+          <img src="assets/icons/iChurch.png" alt="Ceremonia">
+        </button>
+        <button onclick="scrollToSection('s9')" class="btn-party">
+          <img src="assets/icons/iCake.png" alt="Recepción">
+        </button>
+        <button onclick="scrollToSection('s12')" class="btn-msj">
+          <img src="assets/icons/iWsp.png" alt="Confirmación">
+        </button>
+      </div>
+    </nav>
+      
+  </main>
+
+</body>
+</html>
