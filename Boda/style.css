@@ -265,12 +265,12 @@ body {
     height: 32px;
   }
 
-  .btn-inicio  { top: 58px !important; }
-  .btn-mail    { top: 53px !important; }
-  .btn-clock   { top: 43px !important; }
-  .btn-iglesia { top: 43px !important; }
-  .btn-party   { top: 53px !important; }
-  .btn-msj     { top: 58px !important; }
+  .btn-inicio  { top: 58px !important; left: 24px !important; }
+  .btn-mail    { top: 53px !important; left: 84px !important; }
+  .btn-clock   { top: 43px !important; left: 144px !important; }
+  .btn-iglesia { top: 43px !important; left: 204px !important; }
+  .btn-party   { top: 53px !important; left: 264px !important; }
+  .btn-msj     { top: 58px !important; left: 324px !important; }
 }
 
 /* 📳 Fon — 420px - Antes 400px */
@@ -289,7 +289,6 @@ body {
   .btn-clock   { top: 28px !important; left: 144px !important; }
   .btn-iglesia { top: 28px !important; left: 204px !important; }
   .btn-party   { top: 38px !important; left: 264px !important; }
-  .btn-msj     { display: none !important; left: auto !important; }
 }
 /* =====================================01=========================================== */
 /*
