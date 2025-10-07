@@ -272,12 +272,12 @@ body {
     outline-offset: 4px !important;
   }
 
-  .btn-inicio  { top: 59px !important; left: 24px !important; }
-  .btn-mail    { top: 54px !important; left: 84px !important; }
-  .btn-clock   { top: 44px !important; left: 144px !important; }
-  .btn-iglesia { top: 44px !important; left: 204px !important; }
-  .btn-party   { top: 54px !important; left: 264px !important; }
-  .btn-msj     { top: 59px !important; left: 324px !important; }
+  .btn-inicio  { top: 57px !important; left: 24px !important; }
+  .btn-mail    { top: 52px !important; left: 84px !important; }
+  .btn-clock   { top: 42px !important; left: 144px !important; }
+  .btn-iglesia { top: 42px !important; left: 204px !important; }
+  .btn-party   { top: 52px !important; left: 264px !important; }
+  .btn-msj     { top: 57px !important; left: 324px !important; }
 }
 
 /* 📳 Fon — 400px */
