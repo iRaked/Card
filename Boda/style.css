@@ -262,13 +262,28 @@ body {
   left: 405px;
 }
 
+@media screen and (max-width: 480px) {
+  body::before {
+    content: "480px corte activo";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: green;
+    color: white;
+    padding: 4px 8px;
+    z-index: 9999;
+    font-size: 12px;
+  }
+}
+
+
 /* 📱 iFone — 480px - Antes 430px y 400px */
 @media screen and (max-width: 480px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
-        outline: 2px solid red;
-        outline-offset: 4px;
+        outline: 2px solid red !important;
+        outline-offset: 4px !important;
   }
 
   .btn-inicio  { top: 61px !important; left: 24px !important; }
