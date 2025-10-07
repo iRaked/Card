@@ -268,16 +268,16 @@ body {
   .botones-superiores img {
     width: 32px;
     height: 32px;
-    outline: 2px solid cyan !important;
-    outline-offset: 4px !important;
+    /*outline: 2px solid cyan !important;
+    outline-offset: 4px !important;*/
   }
 
-  .btn-inicio  { top: 53px !important; left: 28px !important; }
+  .btn-inicio  { top: 54px !important; left: 28px !important; }
   .btn-mail    { top: 48px !important; left: 88px !important; }
   .btn-clock   { top: 38px !important; left: 148px !important; }
   .btn-iglesia { top: 38px !important; left: 208px !important; }
   .btn-party   { top: 48px !important; left: 268px !important; }
-  .btn-msj     { top: 53px !important; left: 328px !important; }
+  .btn-msj     { top: 54px !important; left: 328px !important; }
 }
 
 /* 📳 Fon — 400px */
