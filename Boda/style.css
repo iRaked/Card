@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -270,7 +274,13 @@ body {
   .btn-clock   { top: 46px !important; left: 144px !important; }
   .btn-iglesia { top: 46px !important; left: 204px !important; }
   .btn-party   { top: 56px !important; left: 264px !important; }
-  .btn-msj     { top: 61px !important; left: 324px !important; }
+  .btn-msj {
+  display: block !important;
+  position: absolute;
+  top: 64px !important;
+  left: 324px !important;
+}
+
 }
 
 /* 📳 Fon — 420px */
