@@ -263,20 +263,8 @@ body {
 }
 
 /* RESPONSIVE */
-/* 🟩 Corte activo para iFone — 480px */
+/* 📱 iFone — 480px */
 @media screen and (max-width: 480px) {
-  body::before {
-    content: "480px corte activo";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: green;
-    color: white;
-    padding: 4px 8px;
-    z-index: 9999;
-    font-size: 12px;
-  }
-
   .botones-superiores img {
     width: 32px;
     height: 32px;
@@ -284,38 +272,16 @@ body {
     outline-offset: 4px !important;
   }
 
-  .btn-inicio  { top: 61px !important; left: 24px !important; }
-  .btn-mail    { top: 56px !important; left: 84px !important; }
-  .btn-clock   { top: 46px !important; left: 144px !important; }
-  .btn-iglesia { top: 46px !important; left: 204px !important; }
-  .btn-party   { top: 56px !important; left: 264px !important; }
-
-  .btn-msj {
-    display: block !important;
-    position: absolute;
-    top: 64px !important;
-    left: 324px !important;
-  }
+  .btn-inicio  { top: 59px !important; left: 24px !important; }
+  .btn-mail    { top: 54px !important; left: 84px !important; }
+  .btn-clock   { top: 44px !important; left: 144px !important; }
+  .btn-iglesia { top: 44px !important; left: 204px !important; }
+  .btn-party   { top: 54px !important; left: 264px !important; }
+  .btn-msj     { top: 59px !important; left: 324px !important; }
 }
 
-/* 🟦 Corte activo para Fon — 400px */
+/* 📳 Fon — 400px */
 @media screen and (max-width: 400px) {
-  html, body {
-    overflow-x: hidden !important;
-  }
-
-  body::before {
-    content: "400px corte activo";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: blue;
-    color: white;
-    padding: 4px 8px;
-    z-index: 9999;
-    font-size: 12px;
-  }
-
   .botones-superiores img {
     width: 32px;
     height: 32px;
@@ -327,7 +293,6 @@ body {
   .btn-iglesia { top: 28px !important; left: 204px !important; }
   .btn-party   { top: 38px !important; left: 264px !important; }
 
-  /* Eliminación total del 6º botón */
   .btn-msj {
     display: none !important;
     position: absolute !important;
