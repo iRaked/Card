@@ -258,35 +258,36 @@ body {
   left: 405px;
 }
 
-/* 📱 iFone: 430px */
+/* 📱 iFone — 430px: subir +5px, compactar íconos, mantener 5 botones */
 @media screen and (max-width: 430px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
   }
 
-  .btn-inicio  { bottom: 18px; }
-  .btn-mail    { bottom: 25px; }
-  .btn-clock   { bottom: 32px; }
-  .btn-iglesia { bottom: 32px; }
-  .btn-party   { bottom: 25px; }
-  /* btn-msj omitido visualmente */
+  .btn-inicio  { bottom: 18px !important; }
+  .btn-mail    { bottom: 25px !important; }
+  .btn-clock   { bottom: 32px !important; }
+  .btn-iglesia { bottom: 32px !important; }
+  .btn-party   { bottom: 25px !important; }
+  .btn-msj     { display: none !important; }
 }
 
-/* 📳 Fon: 400px */
+/* 📳 Fon — 400px: subir +10px, compactar íconos, reposicionar, mantener 5 botones */
 @media screen and (max-width: 400px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
   }
 
-  .btn-inicio  { bottom: 23px; left: 24px; }
-  .btn-mail    { bottom: 30px; left: 84px; }
-  .btn-clock   { bottom: 37px; left: 144px; }
-  .btn-iglesia { bottom: 37px; left: 204px; }
-  .btn-party   { bottom: 30px; left: 264px; }
-  .btn-msj     { display: none; }
+  .btn-inicio  { bottom: 23px !important; left: 24px !important; }
+  .btn-mail    { bottom: 30px !important; left: 84px !important; }
+  .btn-clock   { bottom: 37px !important; left: 144px !important; }
+  .btn-iglesia { bottom: 37px !important; left: 204px !important; }
+  .btn-party   { bottom: 30px !important; left: 264px !important; }
+  .btn-msj     { display: none !important; }
 }
+
 /* =====================================01=========================================== */
 /*
 .section1 {
