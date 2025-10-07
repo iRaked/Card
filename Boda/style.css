@@ -808,8 +808,9 @@ body {
 
 /* 🧱 Cubo exclusivo para Vestimenta */
 .cubo-s11 {
-  width: 400px;
-  height: 310px;
+  width: calc(100% - 2rem);
+  max-width: 400px;
+  height: auto;
   background-color: #f8e79940;
   border-radius: 30px;
   padding: 2rem;
@@ -824,6 +825,7 @@ body {
   margin: 0 auto 32px auto;
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cubo-s11.visible {
@@ -840,8 +842,9 @@ body {
 
 /* 🎁 Segundo cubo exclusivo para Regalo */
 .cubo-s11b {
-  width: 400px;
-  height: 310px;
+  width: calc(100% - 2rem);
+  max-width: 400px;
+  height: auto;
   background-color: #f8e79940;
   border-radius: 30px;
   padding: 2rem;
@@ -856,6 +859,7 @@ body {
   margin: 0 auto 32px auto;
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cubo-s11b.visible {
