@@ -197,6 +197,13 @@ body {
   display: block;
 }
 
+/* 🧭 Nuevo contenedor ritualizado */
+.boton-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 /* 🎯 Contenedor de botones flotantes */
 .botones-superiores {
   position: absolute;
@@ -229,41 +236,40 @@ body {
 
 /* 📍 Posicionamiento manual por clase */
 .btn-inicio {
-  top: 60px;
+  bottom: 8px;
   left: 40px;
   transform: none;
 }
 
 .btn-mail {
-  top: 55px;
+  bottom: 15px;
   left: 115px;
   transform: none;
 }
 
 .btn-clock {
-  top: 45px;
+  bottom: 22px;
   left: 185px;
   transform: none;
 }
 
 .btn-iglesia {
-  top: 45px;
+  bottom: 22px;
   left: 260px;
   transform: none;
 }
 
 .btn-party {
-  top: 55px;
+  bottom: 15px;
   left: 330px;
   transform: none;
 }
 
 .btn-msj {
-  top: 60px;
-  left: 388px; /* ajustado para que entre en iFone sin recorte */
+  bottom: 8px;
+  left: 390px;
   transform: none;
 }
-
 /* =====================================01=========================================== */
 /*
 .section1 {
