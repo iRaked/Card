@@ -97,26 +97,6 @@ body {
   background: none;
   z-index: 10;
 }
-
-/* 🧭 Botonera fija en la parte baja */
-.botonera {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  z-index: 9999;
-  pointer-events: none; /* evita que la imagen base interfiera */
-}
-
-/* 🎨 Imagen base */
-.fondo-botonera {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 /* ====================================COVER========================================== */
 /* 📱 Entrada a la Card */
 .entrada-card {
@@ -251,31 +231,37 @@ body {
 .btn-inicio {
   top: 60px;
   left: 40px;
+  transform: none;
 }
 
 .btn-mail {
   top: 55px;
   left: 115px;
+  transform: none;
 }
 
 .btn-clock {
   top: 45px;
   left: 185px;
+  transform: none;
 }
 
 .btn-iglesia {
   top: 45px;
   left: 260px;
+  transform: none;
 }
 
 .btn-party {
   top: 55px;
   left: 330px;
+  transform: none;
 }
 
 .btn-msj {
   top: 60px;
-  left: 405px;
+  left: 388px; /* ajustado para que entre en iFone sin recorte */
+  transform: none;
 }
 
 /* =====================================01=========================================== */
