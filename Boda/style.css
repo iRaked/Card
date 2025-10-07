@@ -5,6 +5,7 @@ body {
   color: #5c4200;
   font-size: 20px;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .fecha-ceremonial,
@@ -67,10 +68,11 @@ body {
 /* 🎁 Contenedor principal con scroll */
 .main-card {
   position: relative;
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
   z-index: 10;
   overflow-y: scroll;
   height: 100vh;
@@ -404,9 +406,15 @@ body {
 }
 
 /* =====================================03=========================================== */
+.section3 {
+  overflow-x: visible;
+  padding-right: 1rem;
+}
+
 .cubo {
-  width: 420px;
-  height: 720px;
+  width: 92vw;
+  max-width: 420px;
+  height: auto;
   background-color: #f8e79940; /* tono base dorado suave */
   border-radius: 30px;
   padding: 2rem;
@@ -421,6 +429,7 @@ body {
   margin: 0 auto 24px auto;
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cubo.visible {
