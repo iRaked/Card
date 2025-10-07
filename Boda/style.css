@@ -263,7 +263,7 @@ body {
 }
 
 /* 📱 iFone — 480px - Antes 430px y 400px */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .botones-superiores img {
     width: 32px;
     height: 32px;
@@ -1015,3 +1015,4 @@ body {
   background: transparent;
   pointer-events: none;
 }
+
