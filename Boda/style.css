@@ -412,14 +412,14 @@ body {
 }
 
 .cubo {
-  width: 92vw;
+  width: calc(100% - 2rem);
   max-width: 420px;
   height: auto;
-  background-color: #f8e79940; /* tono base dorado suave */
+  background-color: #f8e79940;
   border-radius: 30px;
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 2px solid #b8860b; /* borde dorado profundo */
+  border: 2px solid #b8860b;
   backdrop-filter: blur(2px);
   z-index: 10;
   will-change: transform, opacity;
