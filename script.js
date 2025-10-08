@@ -1,84 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cubos = document.querySelectorAll(".cubo-redondeado");
-  if (!cubos.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible");
-      }
-    });
-  }, {
-    threshold: 0.45, // activa cuando el 60% del cubo es visible
-    rootMargin: "0px 0px -20% 0px" // retrasa la activación hasta que el cubo esté más centrado
-  });
-
-  cubos.forEach(cubo => observer.observe(cubo));
-});
-
 // ⛔ Bloqueo del menú contextual
-document.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
-});
+document.addEventListener("contextmenu", e => e.preventDefault());
 
-// 🎈 Animación de burbujas en canvas
-document.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById('burbujas');
-  if (!canvas) return;
-
-  const ctx = canvas.getContext('2d');
-
-  const resizeCanvas = () => {
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-  };
-
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
-  let burbujas = Array.from({ length: 30 }, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 8 + 2,
-    d: Math.random() * 1 + 0.5
-  }));
-
-  function dibujarBurbujas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-
-    burbujas.forEach(b => {
-      ctx.beginPath();
-      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-      ctx.fill();
-
-      b.y -= b.d;
-
-      if (b.y < -10) {
-        b.y = canvas.height + 10;
-        b.x = Math.random() * canvas.width;
-      }
-    });
-
-    requestAnimationFrame(dibujarBurbujas);
-  }
-
-  dibujarBurbujas();
-
-  iniciarTemporizador(new Date("2030-08-17T17:00:00").getTime());
-});
-
-// 🧭 Desplazamiento suave a secciones
+// 🧭 Desplazamiento suave a secciones reales
 function scrollToSection(id) {
-  const target = document.getElementById(id);
+  const mapa = {
+    intro: "s1",
+    photo: "s2",
+    "temporizador-section": "s3",
+    invitacion: "s4",
+    location: "s5"
+  };
+  const targetId = mapa[id] || id;
+  const target = document.getElementById(targetId);
   if (target) {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -88,7 +23,7 @@ function iniciarTemporizador(fechaEvento) {
   if (!contenedor) return;
 
   function actualizar() {
-    const ahora = new Date().getTime();
+    const ahora = Date.now();
     const distancia = fechaEvento - ahora;
 
     if (distancia < 0) {
@@ -128,17 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
 // 🚪 Entrada móvil + activación de Smart Card y audio
 document.addEventListener("DOMContentLoaded", () => {
   const botonEntrada = document.getElementById("activarSmartCard");
-  const entrada = document.querySelector(".entrada-movil");
+  const entrada = document.querySelector(".entrada-card");
   const smartCard = document.querySelector(".smart-card");
   const audio = document.getElementById("musica-fondo");
 
   if (!botonEntrada || !entrada || !smartCard) return;
 
   botonEntrada.addEventListener("click", () => {
-    console.log("✅ Botón 'Entrar' fue clickeado");
-
     entrada.style.display = "none";
-    entrada.style.setProperty("display", "none", "important");
     entrada.style.visibility = "hidden";
     entrada.style.opacity = "0";
     smartCard.classList.add("activa");
@@ -150,4 +82,69 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+});
+
+// 🧊 Activación de cubos redondeados (S5)
+document.addEventListener("DOMContentLoaded", () => {
+  const cubos = document.querySelectorAll(".rounded-cube");
+  if (!cubos.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("visible", entry.isIntersecting);
+    });
+  }, {
+    threshold: 0.45,
+    rootMargin: "0px 0px -20% 0px"
+  });
+
+  cubos.forEach(cubo => observer.observe(cubo));
+});
+
+// 🎈 Animación de burbujas en canvas (si se incluye)
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("burbujas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+
+  const resizeCanvas = () => {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+  };
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  let burbujas = Array.from({ length: 30 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 8 + 2,
+    d: Math.random() * 1 + 0.5
+  }));
+
+  function dibujarBurbujas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+
+    burbujas.forEach(b => {
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      b.y -= b.d;
+
+      if (b.y < -10) {
+        b.y = canvas.height + 10;
+        b.x = Math.random() * canvas.width;
+      }
+    });
+
+    requestAnimationFrame(dibujarBurbujas);
+  }
+
+  dibujarBurbujas();
+
+  iniciarTemporizador(new Date("2030-08-17T17:00:00").getTime());
 });
