@@ -23,25 +23,14 @@ section {
   gap: var(--gap-universal);
 }
 
-.botonera {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--gap-universal);
-  pointer-events: none;
-}
-
-.botonera button {
-  pointer-events: auto;
-  flex: 1 1 60px;
-  min-width: 60px;
-}
-
 .baby,
+.name,
 .event-title,
-.event-name,
-.invite-line {
+.event-name {
   font-size: clamp(1.5rem, 5vw, 3rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: center;
 }
 /* ***************** Inicio regular ***************** */
