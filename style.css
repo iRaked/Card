@@ -23,16 +23,6 @@ section {
   gap: var(--gap-universal);
 }
 
-.baby,
-.name,
-.event-title,
-.event-name {
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-}
 /* ***************** Inicio regular ***************** */
 html {
   overflow-x: hidden;
