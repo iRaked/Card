@@ -1,3 +1,50 @@
+:root {
+  --ancho-maximo: 500px;
+  --padding-lateral: 1rem;
+  --gap-universal: 1rem;
+}
+
+.main-card {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding-inline: var(--padding-lateral);
+  box-sizing: border-box;
+}
+
+section {
+  padding-block: 2rem;
+}
+
+.contenedor-central,
+.contenedor-final {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-universal);
+}
+
+.botonera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-universal);
+  pointer-events: none;
+}
+
+.botonera button {
+  pointer-events: auto;
+  flex: 1 1 60px;
+  min-width: 60px;
+}
+
+.baby,
+.event-title,
+.event-name,
+.invite-line {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+}
+/* ***************** Inicio regular ***************** */
 html {
   overflow-x: hidden;
 }
@@ -715,8 +762,15 @@ font-family: 'Great Vibes', cursive;
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
   margin-bottom: 0.5rem;
-  color: #0080ff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  color: #ffda5d;
+  text-shadow:
+    -0.5px -0.5px 0 #fff,
+     0.5px -0.5px 0 #fff,
+    -0.5px  0.5px 0 #fff,
+     0.5px  0.5px 0 #fff,
+     0 6px 3px #009ab5,
+     0 0 20px rgba(90, 150, 255, 0.9),
+     0 0 26px rgba(90, 150, 255, 0.9);
 }
 
 /* Contenedor central */
