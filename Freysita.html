@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Rick">
-  <title>Feliz Cumpleaños, BBfita 🍓</title>
+  <title>Feliz Cumpleaños Eluney</title>
   <link rel="author" href="https://santi-graphics.vercel.app/copyright.txt">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- BLOCK -->
   <script type="text/javascript">
   document.onkeydown = function(){return false};
   document.oncontextmenu = function(){return false}
@@ -22,7 +23,7 @@
     body {
       margin: 0; padding: 0;
       font-family: 'Raleway', sans-serif;
-      background: #191970;
+      background: #000;
       height: 100vh;
       display: flex;
       align-items: center; justify-content: center;
@@ -36,7 +37,7 @@
       z-index: 1;
     }
     .card {
-      background: #111; /* Volví al negro original para mejor contraste con el video, puedes cambiarlo a #191970 si prefieres */
+      background: #111;
       border: 2px solid #d4af37;
       border-radius: 20px;
       padding: 40px;
@@ -58,28 +59,10 @@
       margin: 0 auto 20px;
       border: 3px solid #d4af37;
       box-shadow: 0 6px 15px rgba(212,175,55,0.6);
-      background-color: #000; /* Fondo negro por si tarda en cargar */
     }
     #content-wrapper { transition: opacity 0.8s ease; opacity: 1; }
     .fade-out { opacity: 0 !important; }
-    h1 { 
-      font-family: 'Playfair Display', serif; 
-      color: #d4af37; 
-      font-size: 2.2em; 
-      margin: 10px 0; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    h1 img.flag {
-      width: 40px;
-      height: 28px;
-      object-fit: contain;
-      vertical-align: middle;
-      display: inline-block;
-    }
+    h1 { font-family: 'Playfair Display', serif; color: #d4af37; font-size: 2.2em; margin: 10px 0; }
     p { color: #eee; font-size: 1.1em; line-height: 1.6; margin-bottom: 30px; min-height: 80px; }
     .icons { display: flex; justify-content: center; gap: 25px; }
     .icons i { font-size: 2em; color: #d4af37; transition: all 0.3s ease; cursor: pointer; }
@@ -103,22 +86,10 @@
     @keyframes spin { 100% { transform: rotate(360deg); } }
 
     .emoji-pop {
-      position: fixed; 
-      z-index: 9999; 
+      position: fixed; z-index: 9999; font-size: 2.5em;
       pointer-events: none;
       animation: floatAndFade 1.5s forwards;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
     }
-    .emoji-pop img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-    }
-
     @keyframes floatAndFade {
       0% { transform: translate(-50%, 0) scale(0.5); opacity: 0; }
       20% { opacity: 1; transform: translate(-50%, -30px) scale(1.2); }
@@ -134,30 +105,26 @@
     <i class="fas fa-compact-disc" id="musicIcon"></i>
   </div>
 
-  <audio id="birthdaySong" loop preload="metadata">
+  <audio id="birthdaySong" loop>
     <source src="https://iraked.github.io/ExtasisRadio/assets/Panda-Feliz-cumpleanos.mp3" type="audio/mpeg">
   </audio>
 
   <div class="card animate__animated animate__fadeInUp">
-    <!-- ✅ CORRECCIÓN 1 & 2: preload="metadata" y un poster de respaldo -->
-    <video id="mainVideo" autoplay loop muted playsinline preload="metadata" poster="https://santi-graphics.vercel.app/assets/img/Cake.ico">
-      <source src="https://santi-graphics.vercel.app/assets/video/Kurohime.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline>
+      <source src="https://santi-graphics.vercel.app/assets/video/Argentos.mp4" type="video/mp4">
     </video>
     
     <div id="content-wrapper">
-      <h1 id="slide-title">
-        <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR">
-        Homenaje para alguien tan grande y piola como vos
-        <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/bj.png" alt="BJ">
-      </h1>
+      <h1 id="slide-title">✨ Feliz Cumpleaños, Eluney ✨</h1>
       <p id="slide-text">
-        Todo empezó con esa broma que, hasta el día de hoy, nadie más ha logrado replicar. No fue solo suerte, fue esa curiosidad mutua la que nos conectó. Y aunque hay altibajos, hemos sabido preservar esta amistad con el mismo toque divertido y apasionado. No por nada somos argentinos hasta el cajón.
+        Celebrar tu vida es mi mayor alegría. Gracias por compartir este segundo año a mi lado, llenándolo de luz y de nosotros. ¡Que este día sea solo el inicio de lo mejor!<br><br>
+        <strong>Te quiero mucho, mi conejita.</strong>
       </p>
       <div class="icons" id="slide-icons">
-        <i class="fas fa-face-laugh-squint" onclick="spawnEmoji(event)"></i>
-        <i class="fas fa-users" onclick="spawnEmoji(event)"></i>
-        <i class="fas fa-beer-mug-empty" onclick="spawnEmoji(event)"></i>
-        <i class="fas fa-fire" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-gift" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-champagne-glasses" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-birthday-cake" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-heart" onclick="spawnEmoji(event)"></i>
       </div>
     </div>
   </div>
@@ -184,19 +151,19 @@
 
     const slides = [
       {
-        title: '<img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR"> Homenaje para alguien tan grande y piola como vos <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/bj.png" alt="BJ">',
-        text: "Todo empezó con esa broma que, hasta el día de hoy, nadie más ha logrado replicar. No fue solo suerte, fue esa curiosidad mutua la que nos conectó. Y aunque hay altibajos, hemos sabido preservar esta amistad con el mismo toque divertido y apasionado. No por nada somos argentinos hasta el cajón.",
-        icons: ['fa-face-laugh-squint', 'fa-users', 'fa-beer-mug-empty', 'fa-fire']
+        title: "✨ Feliz Cumpleaños, Eluney ✨",
+        text: "Celebrar tu vida es mi mayor alegría. Gracias por compartir este segundo año a mi lado, llenándolo de luz y de nosotros. ¡Que este día sea solo el inicio de lo mejor!<br><br><strong>Te quiero mucho, mi conejita.</strong>",
+        icons: ['fa-gift', 'fa-champagne-glasses', 'fa-birthday-cake', 'fa-heart']
       },
       {
-        title: "🥂 Música, Juntadas y Fernet 🥂",
-        text: "Son incontables las juntadas disfrutando de lo que nos unió desde el primer día: la música. Sé que no sos de festejar, pero hoy <strong>debés</strong> hacer una excepción. Que el fernet con coca se convierta en nuestra futura tradición, con la buena onda de siempre, elevando tu espíritu a un estado puro de alegría.",
-        icons: ['fa-music', 'fa-wine-glass', 'fa-record-vinyl', 'fa-fire']
+        title: "❤️ Un Sueño que Crece ❤️",
+        text: "Amor, cada día a tu lado es un regalo. Estoy muy feliz de celebrar un año más contigo y me ilusiona mucho todo lo que vivimos, guardando siempre en mi corazón el deseo de que, cuando la vida nos lo permita, sigamos acumulando momentos especiales uno al lado del otro.",
+        icons: ['fa-star', 'fa-gem', 'fa-wand-magic-sparkles', 'fa-crown']
       },
       {
-        title: "🌟 ¡Feliz Cumpleaños, Keyla! 🌟",
-        text: "Bebota, hay personas que no solo cumplen años, sino que iluminan el tiempo de quienes las rodean. Te deseo salud, felicidad y momentos inolvidables para que tu brillo sea incomensurable. ¡Que este capítulo sea tan rebelde como tú y que la vida te siga regalando motivos para brindar!<br><br><strong>¡Te quiero muchísimo, bbfita! ¡Aguante la Fresa Rebelde! 🍓✊</strong>",
-        icons: ['fa-crown', 'fa-star', 'fa-champagne-glasses', 'fa-heart']
+        title: "🥂 Por Todo lo que Viene 🥂",
+        text: "La vida nos ha unido y mi mayor deseo es seguir construyendo recuerdos inolvidables a tu lado. ¡Feliz día, baby! Te mereces todo el amor del mundo hoy y siempre.",
+        icons: ['fa-glass-cheers', 'fa-music', 'fa-republican', 'fa-fire']
       }
     ];
 
@@ -211,7 +178,7 @@
       setTimeout(() => {
         currentSlide = (currentSlide + 1) % slides.length;
         const data = slides[currentSlide];
-        titleEl.innerHTML = data.title;
+        titleEl.innerText = data.title;
         textEl.innerHTML = data.text;
         iconsEl.innerHTML = '';
         data.icons.forEach(iconClass => {
@@ -224,47 +191,22 @@
       }, 800);
     }
 
-    setInterval(nextSlide, 15000);
+    setInterval(nextSlide, 8000);
 
-    // ✅ CORRECCIÓN 3: Usar DOMContentLoaded en lugar de window.onload
-    // Esto garantiza que la animación arranque INMEDIATAMENTE, sin esperar a que el video termine de "bufferizar".
-    document.addEventListener("DOMContentLoaded", () => {
+    window.onload = () => {
       const end = Date.now() + 4000;
       (function frame() {
         confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#d4af37', '#ffffff'] });
         confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#d4af37', '#ffffff'] });
         if (Date.now() < end) requestAnimationFrame(frame);
       }());
-    });
-
-    // ✅ CORRECCIÓN 4: Detector de fallo silencioso de video
-    const videoEl = document.getElementById('mainVideo');
-    videoEl.addEventListener('error', () => {
-      console.warn("El video no pudo cargarse. Se ocultará para no romper el diseño.");
-      videoEl.style.display = 'none';
-    }, true);
+    };
 
     function spawnEmoji(e) {
-      const items = [
-        "🎉", "🥳", "🍓", "🥂", "🍾", "💖", "✨",
-        { isImg: true, src: "https://santi-graphics.vercel.app/assets/flags/ar.png" }
-      ];
-      
-      const randomItem = items[Math.floor(Math.random() * items.length)];
+      const emojiList = ["🎉","🥳","🎂","🎁","🍾","💖","✨","💎"];
       const emoji = document.createElement('div');
       emoji.className = 'emoji-pop';
-      
-      if (randomItem.isImg) {
-        const img = document.createElement('img');
-        img.src = randomItem.src;
-        img.style.width = "50px";
-        img.style.height = "50px";
-        emoji.appendChild(img);
-      } else {
-        emoji.innerText = randomItem;
-        emoji.style.fontSize = "2.5em";
-      }
-      
+      emoji.innerText = emojiList[Math.floor(Math.random() * emojiList.length)];
       const rect = e.target.getBoundingClientRect();
       emoji.style.left = (rect.left + rect.width / 2) + "px";
       emoji.style.top = rect.top + "px";
