@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/x-icon" href="https://santi-graphics.vercel.app/assets/img/Cake.ico" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Rick">
+  <title>Feliz Cumpleaños, BBfita 🍓</title>
+  <link rel="author" href="https://santi-graphics.vercel.app/copyright.txt">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script type="text/javascript">
+  document.onkeydown = function(){return false};
+  document.oncontextmenu = function(){return false}
+  </script>
+  
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Raleway', sans-serif;
+      background: #191970;
+      height: 100vh;
+      display: flex;
+      align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    #confettiCanvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .card {
+      background: #191970;
+      border: 2px solid #d4af37;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      z-index: 2;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card video {
+      width: 180px; height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 3px solid #d4af37;
+      box-shadow: 0 6px 15px rgba(212,175,55,0.6);
+    }
+    #content-wrapper { transition: opacity 0.8s ease; opacity: 1; }
+    .fade-out { opacity: 0 !important; }
+    h1 { 
+      font-family: 'Playfair Display', serif; 
+      color: #d4af37; 
+      font-size: 2.2em; 
+      margin: 10px 0; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    h1 img.flag {
+      width: 40px;
+      height: 28px;
+      object-fit: contain;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    p { color: #eee; font-size: 1.1em; line-height: 1.6; margin-bottom: 30px; min-height: 80px; }
+    .icons { display: flex; justify-content: center; gap: 25px; }
+    .icons i { font-size: 2em; color: #d4af37; transition: all 0.3s ease; cursor: pointer; }
+    .icons i:hover { color: #ff4081; transform: scale(1.2); }
+    
+    .music-control {
+      position: fixed;
+      top: 20px; right: 20px;
+      z-index: 100;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid #d4af37;
+      border-radius: 50%;
+      width: 50px; height: 50px;
+      display: flex;
+      align-items: center; justify-content: center;
+      cursor: pointer;
+      color: #d4af37;
+      font-size: 1.5em;
+    }
+    .rotating { animation: spin 3s linear infinite; }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    .emoji-pop {
+      position: fixed; 
+      z-index: 9999; 
+      pointer-events: none;
+      animation: floatAndFade 1.5s forwards;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+    }
+    .emoji-pop img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    @keyframes floatAndFade {
+      0% { transform: translate(-50%, 0) scale(0.5); opacity: 0; }
+      20% { opacity: 1; transform: translate(-50%, -30px) scale(1.2); }
+      100% { transform: translate(-50%, -150px) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="music-control" id="musicBtn" onclick="toggleMusic()">
+    <i class="fas fa-compact-disc" id="musicIcon"></i>
+  </div>
+
+  <audio id="birthdaySong" loop>
+    <source src="https://iraked.github.io/ExtasisRadio/assets/Panda-Feliz-cumpleanos.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card animate__animated animate__fadeInUp">
+    <video autoplay loop muted playsinline>
+      <source src="https://santi-graphics.vercel.app/assets/video/Kurohime.mp4" type="video/mp4">
+    </video>
+    
+    <div id="content-wrapper">
+      <!-- HTML Inicial sincronizado con el Slide 1 -->
+      <h1 id="slide-title">
+        <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR">
+        Homenaje para alguien tan grande y piola como vos
+        <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/bj.png" alt="BJ">
+      </h1>
+      <p id="slide-text">
+        Todo empezó con esa broma que, hasta el día de hoy, nadie más ha logrado replicar. No fue solo suerte, fue esa curiosidad mutua la que nos conectó. Y aunque hay altibajos, hemos sabido preservar esta amistad con el mismo toque divertido y apasionado. No por nada somos argentinos hasta el cajón.
+      </p>
+      <div class="icons" id="slide-icons">
+        <i class="fas fa-face-laugh-squint" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-users" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-beer-mug-empty" onclick="spawnEmoji(event)"></i>
+        <i class="fas fa-fire" onclick="spawnEmoji(event)"></i>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const song = document.getElementById('birthdaySong');
+    const musicIcon = document.getElementById('musicIcon');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (!isPlaying) {
+        song.play();
+        musicIcon.classList.add('rotating');
+      } else {
+        song.pause();
+        musicIcon.classList.remove('rotating');
+      }
+      isPlaying = !isPlaying;
+    }
+
+    document.body.addEventListener('click', () => {
+        if(!isPlaying) toggleMusic();
+    }, { once: true });
+
+    // ✅ ARRAY DE SLIDES ACTUALIZADO: Las banderas ahora son independientes (ar.png y bj.png)
+    const slides = [
+      {
+        title: '<img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR"> Homenaje para alguien tan grande y piola como vos <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/bj.png" alt="BJ">',
+        text: "Todo empezó con esa broma que, hasta el día de hoy, nadie más ha logrado replicar. No fue solo suerte, fue esa curiosidad mutua la que nos conectó. Y aunque hay altibajos, hemos sabido preservar esta amistad con el mismo toque divertido y apasionado. No por nada somos argentinos hasta el cajón.",
+        icons: ['fa-face-laugh-squint', 'fa-users', 'fa-beer-mug-empty', 'fa-fire']
+      },
+      {
+        title: "🥂 Música, Juntadas y Fernet 🥂",
+        text: "Son incontables las juntadas disfrutando de lo que nos unió desde el primer día: la música. Sé que no sos de festejar, pero hoy <strong>debés</strong> hacer una excepción. Que el fernet con coca se convierta en nuestra futura tradición, con la buena onda de siempre, elevando tu espíritu a un estado puro de alegría.",
+        icons: ['fa-music', 'fa-wine-glass', 'fa-record-vinyl', 'fa-fire']
+      },
+      {
+        title: "🌟 ¡Feliz Cumpleaños, Keyla! 🌟",
+        text: "Bebota, hay personas que no solo cumplen años, sino que iluminan el tiempo de quienes las rodean. Te deseo salud, felicidad y momentos inolvidables para que tu brillo sea incomensurable. ¡Que este capítulo sea tan rebelde como tú y que la vida te siga regalando motivos para brindar!<br><br><strong>¡Te quiero muchísimo, bbfita! ¡Aguante la Fresa Rebelde! 🍓✊</strong>",
+        icons: ['fa-crown', 'fa-star', 'fa-champagne-glasses', 'fa-heart']
+      }
+    ];
+
+    let currentSlide = 0;
+    const wrapper = document.getElementById('content-wrapper');
+    const titleEl = document.getElementById('slide-title');
+    const textEl = document.getElementById('slide-text');
+    const iconsEl = document.getElementById('slide-icons');
+
+    function nextSlide() {
+      wrapper.classList.add('fade-out');
+      setTimeout(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        const data = slides[currentSlide];
+        titleEl.innerHTML = data.title; // innerHTML permite renderizar las etiquetas <img>
+        textEl.innerHTML = data.text;
+        iconsEl.innerHTML = '';
+        data.icons.forEach(iconClass => {
+          const icon = document.createElement('i');
+          icon.className = `fas ${iconClass}`;
+          icon.onclick = (e) => spawnEmoji(e);
+          iconsEl.appendChild(icon);
+        });
+        wrapper.classList.remove('fade-out');
+      }, 800);
+    }
+
+    setInterval(nextSlide, 15000);
+
+    window.onload = () => {
+      const end = Date.now() + 4000;
+      (function frame() {
+        confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#d4af37', '#ffffff'] });
+        confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#d4af37', '#ffffff'] });
+        if (Date.now() < end) requestAnimationFrame(frame);
+      }());
+    };
+
+    function spawnEmoji(e) {
+      const items = [
+        "🎉", "🥳", "🍓", "🥂", "🍾", "💖", "✨",
+        { isImg: true, src: "https://santi-graphics.vercel.app/assets/flags/ar.png" }
+      ];
+      
+      const randomItem = items[Math.floor(Math.random() * items.length)];
+      const emoji = document.createElement('div');
+      emoji.className = 'emoji-pop';
+      
+      if (randomItem.isImg) {
+        const img = document.createElement('img');
+        img.src = randomItem.src;
+        img.style.width = "50px";
+        img.style.height = "50px";
+        emoji.appendChild(img);
+      } else {
+        emoji.innerText = randomItem;
+        emoji.style.fontSize = "2.5em";
+      }
+      
+      const rect = e.target.getBoundingClientRect();
+      emoji.style.left = (rect.left + rect.width / 2) + "px";
+      emoji.style.top = rect.top + "px";
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 1500);
+    }
+  </script>
+</body>
+</html>
