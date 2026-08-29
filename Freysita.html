@@ -36,7 +36,7 @@
       z-index: 1;
     }
     .card {
-      background: #191970;
+      background: #111; /* Volví al negro original para mejor contraste con el video, puedes cambiarlo a #191970 si prefieres */
       border: 2px solid #d4af37;
       border-radius: 20px;
       padding: 40px;
@@ -58,6 +58,7 @@
       margin: 0 auto 20px;
       border: 3px solid #d4af37;
       box-shadow: 0 6px 15px rgba(212,175,55,0.6);
+      background-color: #000; /* Fondo negro por si tarda en cargar */
     }
     #content-wrapper { transition: opacity 0.8s ease; opacity: 1; }
     .fade-out { opacity: 0 !important; }
@@ -133,17 +134,17 @@
     <i class="fas fa-compact-disc" id="musicIcon"></i>
   </div>
 
-  <audio id="birthdaySong" loop>
+  <audio id="birthdaySong" loop preload="metadata">
     <source src="https://iraked.github.io/ExtasisRadio/assets/Panda-Feliz-cumpleanos.mp3" type="audio/mpeg">
   </audio>
 
   <div class="card animate__animated animate__fadeInUp">
-    <video autoplay loop muted playsinline>
+    <!-- ✅ CORRECCIÓN 1 & 2: preload="metadata" y un poster de respaldo -->
+    <video id="mainVideo" autoplay loop muted playsinline preload="metadata" poster="https://santi-graphics.vercel.app/assets/img/Cake.ico">
       <source src="https://santi-graphics.vercel.app/assets/video/Kurohime.mp4" type="video/mp4">
     </video>
     
     <div id="content-wrapper">
-      <!-- HTML Inicial sincronizado con el Slide 1 -->
       <h1 id="slide-title">
         <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR">
         Homenaje para alguien tan grande y piola como vos
@@ -181,7 +182,6 @@
         if(!isPlaying) toggleMusic();
     }, { once: true });
 
-    // ✅ ARRAY DE SLIDES ACTUALIZADO: Las banderas ahora son independientes (ar.png y bj.png)
     const slides = [
       {
         title: '<img class="flag" src="https://santi-graphics.vercel.app/assets/flags/ar.png" alt="AR"> Homenaje para alguien tan grande y piola como vos <img class="flag" src="https://santi-graphics.vercel.app/assets/flags/bj.png" alt="BJ">',
@@ -211,7 +211,7 @@
       setTimeout(() => {
         currentSlide = (currentSlide + 1) % slides.length;
         const data = slides[currentSlide];
-        titleEl.innerHTML = data.title; // innerHTML permite renderizar las etiquetas <img>
+        titleEl.innerHTML = data.title;
         textEl.innerHTML = data.text;
         iconsEl.innerHTML = '';
         data.icons.forEach(iconClass => {
@@ -226,14 +226,23 @@
 
     setInterval(nextSlide, 15000);
 
-    window.onload = () => {
+    // ✅ CORRECCIÓN 3: Usar DOMContentLoaded en lugar de window.onload
+    // Esto garantiza que la animación arranque INMEDIATAMENTE, sin esperar a que el video termine de "bufferizar".
+    document.addEventListener("DOMContentLoaded", () => {
       const end = Date.now() + 4000;
       (function frame() {
         confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#d4af37', '#ffffff'] });
         confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#d4af37', '#ffffff'] });
         if (Date.now() < end) requestAnimationFrame(frame);
       }());
-    };
+    });
+
+    // ✅ CORRECCIÓN 4: Detector de fallo silencioso de video
+    const videoEl = document.getElementById('mainVideo');
+    videoEl.addEventListener('error', () => {
+      console.warn("El video no pudo cargarse. Se ocultará para no romper el diseño.");
+      videoEl.style.display = 'none';
+    }, true);
 
     function spawnEmoji(e) {
       const items = [
